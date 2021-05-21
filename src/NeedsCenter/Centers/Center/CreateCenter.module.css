@@ -19,8 +19,8 @@
 }
 
 .inputField {
-  background-color: tomato !important;
-  color: white !important;
+  background-color: white !important;
+  color: black !important;
   box-sizing: border-box;
   border: 3px solid black !important;
   border-radius: 10px !important;
@@ -30,8 +30,8 @@
 }
 
 .text_area {
-  background-color: tomato !important;
-  color: white !important;
+  background-color: white !important;
+  color: black !important;
   box-sizing: border-box;
   border: 3px solid black !important;
   border-radius: 10px !important;
@@ -55,12 +55,16 @@
   text-shadow: black;
 }
 ::placeholder {
-  color: white;
+  color: black;
   text-transform: uppercase;
   padding: 10px;
 }
 input:not([type="submit"]):not([type="file"]) {
   /* omg so much cleaner */
+  text-align: center;
+}
+
+input [type="text-area"] {
   text-align: center;
 }
 

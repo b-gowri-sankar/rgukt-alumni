@@ -20,8 +20,8 @@ function App() {
           <Route path='/' exact component={HomePage} />
           <Route path="/internships" exact component={Centers}></Route>
           <Route path='/internship/:id' exact component={CenterDetails}></Route>
-          <Route path='/signin' component={SignIn} />
-          <Route path='/signout' component={SignUp} />
+          <Route path='/signin' exact component={SignIn} />
+          <Route path='/signup' exact component={SignUp} />
           <Route path='/createintern' component={CreateCenter} />
         </Switch>  
       </div>

@@ -7,10 +7,12 @@ import SignIn from './signIn';
 const navBar = () => {
     return (
         <Nav>
-            <Logo>
+        <Logo>
+            <a href='/'>
                 <span>
-                    RGUKTAA
+              RGUKTAA
                 </span>
+              </a>
             </Logo>
             <NavMenu>
             <a href="/">
