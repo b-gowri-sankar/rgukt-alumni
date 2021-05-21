@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 import React from 'react';
+import SignedInLinks from './SignedIn';
+import SignIn from './signIn';
+
 // import { Link } from 'react-router-dom'
 const navBar = () => {
     return (
@@ -28,7 +31,9 @@ const navBar = () => {
             <a href="/">
               <span>CONTACT US</span>
             </a>
-          </NavMenu>
+            </NavMenu>
+            <SignIn />
+            <SignedInLinks />
         </Nav>
     )
 }

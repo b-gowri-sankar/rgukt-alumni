@@ -1,0 +1,19 @@
+.post {
+  letter-spacing: 0.1rem;
+}
+.log {
+  letter-spacing: 0.1rem;
+}
+.profile {
+  letter-spacing: 0.3rem;
+  background-color: #ca4740;
+  border-radius: 50%;
+}
+
+.post:hover {
+  transform: scaleX(1.09);
+}
+
+.log:hover {
+  transform: scaleX(1.09);
+}
