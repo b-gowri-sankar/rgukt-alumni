@@ -1,21 +1,29 @@
 import React from 'react';
 import Center from './Center/Center';
-import classes from './Centers.module.css'
+import classes from './Centers.module.css';
+import { connect } from 'react-redux';
 
-const Centers = () => {
+const Centers = (props) => {
+    const centers = props.center;
     return (
         <div className={classes.Centers}>
             <div>
-                    <p className={classes.Centers__title}>Internships</p>
+                <p className={classes.Centers__title}>Internships</p>
             </div>
             <div>
-                <Center />
-                <Center />
-                <Center />
+                {centers && centers.map(
+                    center => (
+                        <Center center={center} key={ center.id }/>
+                ))}
             </div>
-            
         </div>
     )
 }
 
-export default Centers;
+const mapStateToProps = (state)=> {
+    return {
+        center: state.center.projects 
+    }
+}
+
+export default connect(mapStateToProps)(Centers);
