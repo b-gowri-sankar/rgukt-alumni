@@ -1,8 +1,13 @@
+.Centers {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
 .Centers__title {
+  width: 100%;
+  margin-top: 80px;
   color: white;
-  width: 50%;
   background-color: #ca4740;
   padding: 8px;
   text-align: center;
-  margin-left: 50px;
 }

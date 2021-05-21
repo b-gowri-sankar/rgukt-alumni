@@ -4,10 +4,16 @@ import classes from './Centers.module.css'
 
 const Centers = () => {
     return (
-        <div>
-            <p className={classes.Centers__title}>Internships</p>
-            <Center />
-            <Center />
+        <div className={classes.Centers}>
+            <div>
+                    <p className={classes.Centers__title}>Internships</p>
+            </div>
+            <div>
+                <Center />
+                <Center />
+                <Center />
+            </div>
+            
         </div>
     )
 }

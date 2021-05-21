@@ -1,5 +1,5 @@
 .center {
-  width: 70%;
+  width: 100%;
   background: white;
   border: 3px solid black;
   box-sizing: border-box;
@@ -8,7 +8,9 @@
   margin-left: 40px;
   margin-right: 30px;
 }
-
+.dupe {
+  padding-top: 100px;
+}
 .center__title {
   color: #ca4740;
   font-weight: 700;
