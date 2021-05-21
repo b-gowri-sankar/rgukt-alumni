@@ -1,0 +1,23 @@
+.Post {
+  width: 90%;
+  background: white;
+  border: 3px solid black;
+  box-sizing: border-box;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.Date {
+  font-style: italic;
+  text-rendering: optimizeLegibility;
+}
+.Title {
+  font-weight: bold;
+}
+
+.Post:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  box-shadow: 10px 10px 10px #004466;
+}

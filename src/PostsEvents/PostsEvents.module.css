@@ -1,0 +1,11 @@
+.PostsEvents {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media (max-width: 650px) {
+  .PostsEvents {
+    display: block;
+  }
+}

@@ -1,0 +1,12 @@
+.EventsTitle {
+  color: white;
+  width: 50%;
+  background-color: #ca4740;
+  padding: 8px;
+  text-align: center;
+}
+.Events {
+  width: 100%;
+  margin-right: 40px;
+  margin-left: 40px;
+}
