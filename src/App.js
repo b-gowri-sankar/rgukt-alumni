@@ -6,6 +6,7 @@ import Centers from './NeedsCenter/Centers/Centers'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NavBar from './layout/Navbar';
 import HomePage from './HomePage';
+import CenterDetails from './NeedsCenter/Centers/Center/CenterDetails';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <NavBar />
         <Switch>
           <Route path='/' exact component={HomePage} />
-          <Route path="/dashboard" exact component={Centers}></Route>
+          <Route path="/internships" exact component={Centers}></Route>
+          <Route path='/internship/:id' exact component={CenterDetails}></Route>
         </Switch>  
       </div>
     </BrowserRouter>
