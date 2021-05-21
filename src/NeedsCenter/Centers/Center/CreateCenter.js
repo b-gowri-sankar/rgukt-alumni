@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import classes from './CreateCenter.module.css';
+import { createCenter } from '../../../store/actions/centerActions'
+import { connect } from 'react-redux'
 
 class CreateProject extends Component {
     state = {
@@ -18,6 +20,7 @@ class CreateProject extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         console.log(this.state)
+         this.props.createCenter(this.state)
     }
     render() {
         return (
@@ -55,5 +58,10 @@ class CreateProject extends Component {
         )
     }
 }
+const mapDispatchToProps = (dispatch) => {
+    return {
+       createCenter:(center)=> dispatch(createCenter(center))
+   } 
+} 
 
-export default CreateProject;
+export default connect(null,mapDispatchToProps)(CreateProject);
