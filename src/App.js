@@ -7,7 +7,7 @@ import NavBar from './layout/Navbar';
 
 function App() {
   return (
-    < BrowserRouter>
+    <BrowserRouter>
       <div className="App">
         <NavBar />
        <Banner />
@@ -15,7 +15,7 @@ function App() {
       <NeedsCenter />
       <p>Third Cards Row </p>
       </div>
-      </BrowserRouter>
+    </BrowserRouter>
   );
 }
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import React from 'react';
-
+// import { Link } from 'react-router-dom'
 const navBar = () => {
     return (
         <Nav>
@@ -13,19 +13,19 @@ const navBar = () => {
             <a href="/">
               <span>HOME</span>
             </a>
-            <a>
+            <a  href="/">
               <span>LIBRARY</span>
             </a>
-            <a>
+            <a href="/">
               <span>CAREERS</span>
             </a>
-            <a>
+            <a href="/">
               <span>PLACEMENT CELL</span>
             </a>
-            <a>
+            <a href="/">
               <span>CAMPUSES</span>
             </a>
-            <a>
+            <a href="/">
               <span>CONTACT US</span>
             </a>
           </NavMenu>
@@ -108,9 +108,9 @@ const NavMenu = styled.div`
       }
     }
   }
-  /* @media (max-width: 768px) {
+  @media (max-width: 768px) {
     display: none;
-  } */
+  }
 `;
 
 export default navBar;
