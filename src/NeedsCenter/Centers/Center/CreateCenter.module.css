@@ -1,7 +1,7 @@
 .Container {
   margin-top: 20px;
   background-color: rgba(255, 255, 255, 1);
-  height: 520px;
+  height: 700px;
   /* position: absolute; */
   top: -50px;
   width: 50%;
@@ -27,6 +27,18 @@
   box-shadow: 0 0 15px 9px #00000096 !important ;
   text-shadow: #ca4740;
   width: 100% !important;
+}
+
+.text_area {
+  background-color: tomato !important;
+  color: white !important;
+  box-sizing: border-box;
+  border: 3px solid black !important;
+  border-radius: 10px !important;
+  box-shadow: 0 0 15px 9px #00000096 !important ;
+  text-shadow: #ca4740;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .WebsiteName {
@@ -70,5 +82,5 @@ input:not([type="submit"]):not([type="file"]) {
 }
 
 /* .Container{
-    box-shadow: ;
-} */
+      box-shadow: ;
+  } */

@@ -8,6 +8,8 @@ import NavBar from './layout/Navbar';
 import HomePage from './HomePage';
 import CenterDetails from './NeedsCenter/Centers/Center/CenterDetails';
 import SignIn from './auth/SignIn'
+import SignUp from './auth/SignUp'
+import CreateCenter from './NeedsCenter/Centers/Center/CreateCenter';
 
 function App() {
   return (
@@ -18,7 +20,9 @@ function App() {
           <Route path='/' exact component={HomePage} />
           <Route path="/internships" exact component={Centers}></Route>
           <Route path='/internship/:id' exact component={CenterDetails}></Route>
-          <Route path='/signin' component={ SignIn}/>
+          <Route path='/signin' component={SignIn} />
+          <Route path='/signout' component={SignUp} />
+          <Route path='/createintern' component={CreateCenter} />
         </Switch>  
       </div>
     </BrowserRouter>
