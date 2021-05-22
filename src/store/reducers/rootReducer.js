@@ -8,9 +8,9 @@ import { combineReducers } from 'redux';
 
 const rootReducers = combineReducers({
     firebase: firebaseReducer,
-    firestore: firestoreReducer,
     auth: authReducer,
-    center:centerReducer
+    center: centerReducer,
+    firestore : firestoreReducer
 })
 
 export default rootReducers;
