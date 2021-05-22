@@ -1,7 +1,15 @@
 export const createCenter = (project) => {
-    return (dispatch, getState) => {
+    return (dispatch, getState,{ getFirebase}) => {
         console.log(project)
         //make a call to Database
-        dispatch({ type: 'CREATE_CENTER', center: project })
+        const firestore = getFirebase().firestore();
+        firestore.collection('centers').add({
+            ...project,
+            createdAt: new Date()
+        }).then(() => {
+            dispatch({ type: 'CREATE_CENTER', center: project })
+        }).catch((err) => {
+            dispatch({ type: 'CREATE_CENTER_ERROR',err})
+        })
     }
 };

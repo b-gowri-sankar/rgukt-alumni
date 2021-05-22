@@ -13,6 +13,10 @@ const centerReducer = (state = initState, action) => {
     switch (action.type) {
         case 'CREATE_CENTER':
             console.log('created project', action.center);
+            return state;
+        case 'CREATE_CENTER_ERROR':
+            console.log("create project error", action.err);
+            return state;
         default:
             return state
     }
