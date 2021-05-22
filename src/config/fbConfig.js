@@ -12,7 +12,7 @@ const firebaseConfig = {
     measurementId: "G-6HD6WYSB8V"
 };
   
-firebaseConfig.initializeApp(firebaseConfig)
+firebase.initializeApp(firebaseConfig)
 firebase.firestore().settings({ timestampsInSnapshots: true })
 
 
