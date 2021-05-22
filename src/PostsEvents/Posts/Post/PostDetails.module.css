@@ -1,0 +1,15 @@
+.PostDetails {
+  max-width: 960px;
+  margin: auto;
+  padding: 10px;
+}
+.PostDetails > h1 {
+  color: tomato;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.PostDetails > p {
+  font-size: 16px;
+  text-align: left;
+}
