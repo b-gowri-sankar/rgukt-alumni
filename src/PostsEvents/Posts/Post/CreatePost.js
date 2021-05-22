@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import classes from '../../../NeedsCenter/Centers/Center/CreateCenter.module.css'
+import { createPost } from '../../../store/actions/postActions'
+import { connect } from 'react-redux'
+
 
 class CreatePost extends Component {
     state = {
@@ -14,6 +17,7 @@ class CreatePost extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         console.log(this.state)
+        this.props.createPost(this.state)
     }
     render() {
         return (
@@ -39,5 +43,10 @@ class CreatePost extends Component {
         )
     }
 }
+const mapDispatchToProps = (dispatch) => {
+    return {
+       createPost:(post)=> dispatch(createPost(post))
+   } 
+} 
 
-export default CreatePost
+export default connect(null,mapDispatchToProps)(CreatePost)
