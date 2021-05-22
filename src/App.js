@@ -13,6 +13,7 @@ import SignUp from './auth/SignUp'
 import CreateCenter from './NeedsCenter/Centers/Center/CreateCenter';
 import posts from './PostsEvents/Posts/Posts';
 import PostDetails from './PostsEvents/Posts/Post/PostDetails';
+import Events from './PostsEvents/Events/Events'
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path='/posts' exact component={posts} />
           <Route path='/post/:id' exact component={PostDetails} />
           <Route path='/createpost' exact component={CreatePost} />
+          <Route path='/events' exact component={Events} />
         </Switch>  
       </div>
     </BrowserRouter>
