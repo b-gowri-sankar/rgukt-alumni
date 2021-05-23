@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import React from 'react';
 import SignedInLinks from './SignedIn';
 import SignIn from './signIn';
+import { connect } from 'react-redux';
 
 // import { Link } from 'react-router-dom'
 const navBar = () => {
@@ -120,4 +121,11 @@ const NavMenu = styled.div`
   }
 `;
 
-export default navBar;
+const mapStateToProps = (state) => {
+  console.log(state);
+  return {
+    
+  }
+}
+
+export default connect(mapStateToProps)(navBar);
