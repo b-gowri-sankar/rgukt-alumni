@@ -1,7 +1,22 @@
 import React from 'react';
 import classes from './Banner.module.css'
+import {connect }from 'react-redux'
+// import {Redirect } from 'react-router-dom'
 
-const Banner = () => {
+const Banner = (props) => {
+    const auth = props.auth;
+    let button = (
+        <div className={classes.Banner__buttons}>
+            <button className={classes.Banner__button}>
+                Sign UP
+                    </button>
+            <button className={classes.Banner__button}>
+                Log In
+                    </button>
+        </div>
+    );
+    button = !auth.uid ? button : null;
+
     return (
         <header className={classes.Banner}
             style={{
@@ -15,14 +30,8 @@ const Banner = () => {
                 <h1 className={classes.Banner__title}>
                     RGUKT Alumni
                 </h1>
-                <div className={classes.Banner__buttons}>
-                    <button className={classes.Banner__button}> 
-                        Sign UP
-                    </button>
-                    <button className={classes.Banner__button}>
-                        Log In
-                    </button>
-                </div>
+                {/* {!auth.uid?{button}:null} */}
+                {button}
                 <h1 className={classes.Banner__description}>
                 Catering to the Educational Needs of Gifted Rural Youth of Andhra Pradesh,(Established by the Govt. of Andhra Pradesh and recognized as per Section 2(f) of UGC Act, 1956)
                 </h1>
@@ -31,4 +40,11 @@ const Banner = () => {
         </header>
     );
 }
-export default Banner;
+
+const mapStateToProps = (state) => {
+    return {
+        auth:state.firebase.auth
+    }
+}
+
+export default connect(mapStateToProps)(Banner)
