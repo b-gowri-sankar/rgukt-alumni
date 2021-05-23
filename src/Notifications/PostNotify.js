@@ -5,6 +5,7 @@ import { compose } from 'redux'
 import { Redirect } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import Post from '../PostsEvents/Posts/Post/Post'
+import classes from './PostNotify.module.css'
 
 const PostNotify = (props) => {
     const posts = props.post;
@@ -19,6 +20,11 @@ const PostNotify = (props) => {
                     <Post post={post} id={post.id} />
                     </Link>
             ))}
+            <Link to='/posts'>
+            <div className={classes.Post}>
+                <p className={classes.Date}>View More</p>
+            </div>
+            </Link>
         </div>
     )
 }

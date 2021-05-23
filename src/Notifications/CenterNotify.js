@@ -5,6 +5,7 @@ import { compose } from 'redux'
 import Center from '../NeedsCenter/Centers/Center/Center'
 import { Redirect } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import classes from './PostNotify.module.css'
 
 
 
@@ -26,6 +27,11 @@ const CenterNotify = (props) => {
                     </Link>
                 ))}
             </div>
+            <Link to='/internships'>
+            <div className={classes.Post}>
+                <p className={classes.Date}>View More</p>
+            </div>
+            </Link>
         </div>
     )
 }

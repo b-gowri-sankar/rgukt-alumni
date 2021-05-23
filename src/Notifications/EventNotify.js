@@ -5,6 +5,8 @@ import { compose } from 'redux'
 import { Redirect } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import Event from '../PostsEvents/Events/Event/Event'
+import classes from './PostNotify.module.css'
+
 
 const EventNotify = (props) => {
     const events = props.event;
@@ -17,8 +19,13 @@ const EventNotify = (props) => {
             { events && events.map((event) => (
                 <Link to={'/event/'+event.id}>
                     <Event event={event} id={event.id} />
-                    </Link>
+                </Link>
             ))}
+            <Link to='/events'>
+            <div className={classes.Post}>
+                <p className={classes.Date}>View More</p>
+            </div>
+            </Link>
         </div>
     )
 }
