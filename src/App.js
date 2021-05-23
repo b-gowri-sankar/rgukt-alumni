@@ -23,7 +23,6 @@ function App() {
       <div className="App">
         <NavBar />
         <Switch>
-          <Route path='/' exact component={HomePage} />
           <Route path="/internships" exact component={Centers}></Route>
           <Route path='/internship/:id' exact component={CenterDetails}></Route>
           <Route path='/signin' exact component={SignIn} />
@@ -34,7 +33,9 @@ function App() {
           <Route path='/createpost' exact component={CreatePost} />
           <Route path='/events' exact component={Events} />
           <Route path='/createevent' exact component={CreateEvent} />
-          <Route path='/event/:id' exact component={EventDetails}/>
+          <Route path='/event/:id' exact component={EventDetails} />
+          <Route path='/' component={HomePage} />
+
         </Switch>  
       </div>
     </BrowserRouter>

@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import classes from '../../../auth/SignIn.module.css'
 import { connect } from 'react-redux'
 import { createEvent } from '../../../store/actions/eventActions'
+import { Redirect } from 'react-router-dom'
 
 
 class CreateEvent extends Component {
@@ -23,6 +24,9 @@ class CreateEvent extends Component {
         this.props.createEvent(this.state)
     }
     render() {
+        const auth = this.props.auth;
+        if (!auth.uid)
+            return <Redirect to='/signin'/>
         return (
             <div className={classes.Container}>
                 <div className={classes.WebsiteName}>
@@ -52,10 +56,15 @@ class CreateEvent extends Component {
         )
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        auth:state.firebase.auth
+    }
+}
 const mapDispatchToProps = (dispatch) => {
     return {
        createEvent:(event)=> dispatch(createEvent(event))
    } 
 } 
 
-export default connect(null,mapDispatchToProps)(CreateEvent)
+export default connect(mapStateToProps,mapDispatchToProps)(CreateEvent)

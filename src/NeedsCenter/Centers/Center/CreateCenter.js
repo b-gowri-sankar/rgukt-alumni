@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import classes from './CreateCenter.module.css';
 import { createCenter } from '../../../store/actions/centerActions'
 import { connect } from 'react-redux'
+import {Redirect } from 'react-router-dom'
 
 class CreateProject extends Component {
     state = {
@@ -23,6 +24,9 @@ class CreateProject extends Component {
          this.props.createCenter(this.state)
     }
     render() {
+        const auth = this.props.auth;
+        if (!auth.uid)
+            return <Redirect to='/signin'/>
         return (
             <div className={classes.Container}>
                 <div className={classes.WebsiteName}>
@@ -58,10 +62,15 @@ class CreateProject extends Component {
         )
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        auth:state.firebase.auth
+    }
+}
 const mapDispatchToProps = (dispatch) => {
     return {
        createCenter:(center)=> dispatch(createCenter(center))
    } 
 } 
 
-export default connect(null,mapDispatchToProps)(CreateProject);
+export default connect(mapStateToProps,mapDispatchToProps)(CreateProject);

@@ -3,12 +3,17 @@ import classes from './CenterDetails.module.css'
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux'
+import {Redirect } from 'react-router-dom'
+
 
 const CenterDetails = (props) => {
     // const id = props.match.params.id;
     console.log(props);
     const { center } = props;
     console.log(center)
+    const auth = props.auth;
+    if (!auth.uid)
+        return <Redirect to='/signin'/>
     if (center) {
         return (
             <div className={classes.CenterDetails}>
@@ -45,7 +50,9 @@ const mapStateToProps = (state, ownProps ) => {
     // console.log(centers)
     // console.log(id)
     return {
-        center: center
+        center: center,
+        auth:state.firebase.auth
+
     }
 }
 

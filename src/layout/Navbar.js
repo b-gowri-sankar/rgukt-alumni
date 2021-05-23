@@ -5,7 +5,10 @@ import SignIn from './signIn';
 import { connect } from 'react-redux';
 
 // import { Link } from 'react-router-dom'
-const navBar = () => {
+const navBar = (props) => {
+  const { auth } = props;
+  //console.log(auth);
+  const links = auth.uid ? <SignedInLinks /> : <SignIn />;
     return (
         <Nav>
         <Logo>
@@ -35,8 +38,7 @@ const navBar = () => {
               <span>CONTACT US</span>
             </a>
             </NavMenu>
-            <SignIn />
-            <SignedInLinks />
+            {links}
         </Nav>
     )
 }
@@ -124,7 +126,7 @@ const NavMenu = styled.div`
 const mapStateToProps = (state) => {
   console.log(state);
   return {
-    
+    auth: state.firebase.auth
   }
 }
 

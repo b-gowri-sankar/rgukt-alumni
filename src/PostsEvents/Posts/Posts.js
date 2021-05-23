@@ -4,10 +4,15 @@ import Post from './Post/Post';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom'
+
 
 const Posts = (props) => {
     const posts = props.post;
+    const auth = props.auth;
+    if (!auth.uid)
+        return <Redirect to='/signin'/>
     return (
         <div className={classes.PostCard}>
             <p className={classes.PostsTitle}> News and Updates</p>
@@ -27,7 +32,9 @@ const mapStateToProps = (state) => {
     console.log(state)
     return {
         // center: state.center.projects for demo purposes
-        post:state.firestore.ordered.posts
+        post: state.firestore.ordered.posts,
+        auth: state.firebase.auth
+
     }
 }
 
