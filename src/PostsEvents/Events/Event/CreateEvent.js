@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 // import classes from './SignIn.module.css'
 import classes from '../../../auth/SignIn.module.css'
+import { connect } from 'react-redux'
+import { createEvent } from '../../../store/actions/eventActions'
+
 
 class CreateEvent extends Component {
     state = {
@@ -16,7 +19,8 @@ class CreateEvent extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state)
+        console.log(this.state);
+        this.props.createEvent(this.state)
     }
     render() {
         return (
@@ -48,5 +52,10 @@ class CreateEvent extends Component {
         )
     }
 }
+const mapDispatchToProps = (dispatch) => {
+    return {
+       createEvent:(event)=> dispatch(createEvent(event))
+   } 
+} 
 
-export default CreateEvent
+export default connect(null,mapDispatchToProps)(CreateEvent)

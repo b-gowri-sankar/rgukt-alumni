@@ -1,6 +1,6 @@
 export const createEvent = (event) => {
     return (dispatch, getState,{ getFirebase}) => {
-        console.log(post)
+        console.log(event)
         //make a call to Database
         const firestore = getFirebase().firestore();
         firestore.collection('events').add({
