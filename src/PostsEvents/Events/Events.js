@@ -8,6 +8,7 @@ import {Link} from 'react-router-dom'
 
 const Events = (props) => {
     const events = props.event;
+    console.log(events)
     return (
         <div className={classes.Events}>
             <p className={classes.EventsTitle}>Events</p>

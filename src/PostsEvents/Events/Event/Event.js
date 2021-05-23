@@ -1,16 +1,16 @@
 import React from 'react'
 import classes from './Event.module.css';
 
-const Event = () => {
+const Event = (props) => {
+    console.log(props)
     return (
         <div className={classes.Event}>
             <div className={classes.DateContainer}>
                 <p>Saturday</p>
-                <p className={classes.Date}> Date</p>
+                <p className={classes.Date}> {props.event.date}</p>
             </div>
             <div className={classes.TitleContainer}>
-                <p className={classes.Title}> Michigan Chapter Social Hour May 2021</p>
-                <p className={classes.EventMode}>Event complete</p>
+                <p className={classes.Title}>{props.event.title}</p>
             </div>
         </div>
     );
