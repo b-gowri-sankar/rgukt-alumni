@@ -1,15 +1,15 @@
-export const createPost = (post) => {
+export const createEvent = (event) => {
     return (dispatch, getState,{ getFirebase}) => {
         console.log(post)
         //make a call to Database
         const firestore = getFirebase().firestore();
-        firestore.collection('posts').add({
-            ...post,
+        firestore.collection('events').add({
+            ...event,
             createdAt: new Date()
         }).then(() => {
-            dispatch({ type: 'CREATE_POST', post: post })
+            dispatch({ type: 'CREATE_EVENT', event: event })
         }).catch((err) => {
-            dispatch({ type: 'CREATE_POST_ERROR',err})
+            dispatch({ type: 'CREATE_EVENT_ERROR',err})
         })
     }
 }

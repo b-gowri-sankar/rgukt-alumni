@@ -14,6 +14,8 @@ import CreateCenter from './NeedsCenter/Centers/Center/CreateCenter';
 import posts from './PostsEvents/Posts/Posts';
 import PostDetails from './PostsEvents/Posts/Post/PostDetails';
 import Events from './PostsEvents/Events/Events'
+import CreateEvent from './PostsEvents/Events/Event/CreateEvent'
+import EventDetails from './PostsEvents/Events/Event/EventDetails'
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
           <Route path='/post/:id' exact component={PostDetails} />
           <Route path='/createpost' exact component={CreatePost} />
           <Route path='/events' exact component={Events} />
+          <Route path='/createevent' exact component={CreateEvent} />
+          <Route path='/event/:id' exact component={EventDetails}/>
         </Switch>  
       </div>
     </BrowserRouter>
