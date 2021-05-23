@@ -21,7 +21,9 @@ class CreateEvent extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         console.log(this.state);
-        this.props.createEvent(this.state)
+        this.props.createEvent(this.state);
+        this.props.history.push('/events')
+
     }
     render() {
         const auth = this.props.auth;
