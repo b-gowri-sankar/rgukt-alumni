@@ -35,7 +35,7 @@ const mapStateToProps = (state) => {
 export default compose(
     connect(mapStateToProps),
     firestoreConnect([
-        {collection:'posts', limit:2}
+        {collection:'posts', limit:2, orderBy: ['createdAt', 'desc']}
     ])
 )(PostNotify)
 

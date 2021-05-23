@@ -41,6 +41,6 @@ const mapStateToProps = (state) => {
 export default compose(
     connect(mapStateToProps),
     firestoreConnect([
-        {collection:'centers', limit: 2}
+        {collection:'centers', limit: 2, orderBy: ['createdAt', 'desc']}
     ])
 )(CenterNotify)
