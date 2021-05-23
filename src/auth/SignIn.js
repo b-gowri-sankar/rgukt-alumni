@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import classes from './SignIn.module.css'
 import { connect } from 'react-redux'
-import { signIn} from '../store/actions/authActions'
+import { signIn } from '../store/actions/authActions'
+import {Redirect } from 'react-router-dom'
+
 
 class SignIn extends Component {
     state = {
@@ -20,6 +22,9 @@ class SignIn extends Component {
     }
     render() {
         const { authError } = this.props;
+        const auth = this.props.auth;
+        if (auth.uid)
+            return <Redirect to='/'/>
         return (
             <div className={classes.Container}>
                 <div className={classes.WebsiteName}>
@@ -49,7 +54,8 @@ class SignIn extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        authError: state.auth.authError
+        authError: state.auth.authError,
+        auth: state.firebase.auth
     }
 
 }
