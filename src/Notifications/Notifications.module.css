@@ -1,0 +1,13 @@
+.Notifications {
+  display: flex;
+  margin-left: 40px;
+  width: 100%;
+}
+.Notifications > div {
+  flex: 1; /*grow*/
+  flex-basis: 100%;
+}
+
+.Notifications > div {
+  width: 300px;
+}
