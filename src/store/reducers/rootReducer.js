@@ -2,13 +2,15 @@ import authReducer from './authReducer';
 import centerReducer from './centerReducer';
 import { firebaseReducer } from 'react-redux-firebase';
 import { firestoreReducer } from 'redux-firestore';
-import  postReducer from './postReducer';
+import postReducer from './postReducer';
+import eventReducer from './eventReducer'
 
 import { combineReducers } from 'redux';
 
 const rootReducers = combineReducers({
     post: postReducer,
     firebase: firebaseReducer,
+    event:eventReducer,
     auth: authReducer,
     center: centerReducer,
     firestore: firestoreReducer,
