@@ -9,7 +9,7 @@ const initState = {
 }
 
 const centerReducer = (state = initState, action) => {
-    console.log('this is reducer',action)
+    // console.log('this is reducer',action)
     switch (action.type) {
         case 'CREATE_CENTER':
             console.log('created project', action.center);
