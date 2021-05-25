@@ -35,7 +35,7 @@ class CreateProject extends Component {
                 </div>
                 <form onSubmit={this.handleSubmit} className={classes.form}>
                     <h5 className={classes.Label}>
-                        Sign Up
+                        Create Internship
                     </h5>
                     <div className={classes.inputfield}>
                         <input className={classes.inputField} type='text' id='title' onChange={this.handleChange}  placeholder="title"/>

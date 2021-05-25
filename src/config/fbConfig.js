@@ -1,8 +1,9 @@
 import firebase from 'firebase/app'
 import 'firebase/firestore'
 import 'firebase/auth'
+import 'firebase/storage'
 
-const firebaseConfig = {
+export const firebaseConfig = {
     apiKey: "AIzaSyDD5LtpXUyhiIFyCG5aY5FkvuCdvu4Lzj8",
     authDomain: "rgukt-alumni.firebaseapp.com",
     projectId: "rgukt-alumni",
@@ -14,6 +15,8 @@ const firebaseConfig = {
   
 firebase.initializeApp(firebaseConfig)
 firebase.firestore().settings({ timestampsInSnapshots: true })
-
+export const fire = firebase.firestore();
+export const storage = firebase.storage();
+export const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 
 export default firebase;
