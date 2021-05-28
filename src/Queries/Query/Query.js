@@ -2,15 +2,17 @@ import classes from './Query.module.css';
 import React from 'react';
 
 
-const Query = () => {
+const Query = ({ docs }) => {
     
+    console.log(docs)
+
     return (
         <div className={classes.Card}>
             <div className={classes.Description}>
-                Hello All, I am a graduate student at Brown University and looking for internships in the US for 2021 summer in Machine learning/Data science. Any help/leads/referrals would be very very helpful.    
+               { docs.description}    
             </div>
             <div className={classes.Author}>
-                <p className={classes.Author__title}> Peeyush Kumar Agarwal</p>
+                <p className={classes.Author__title}>Posted By {docs.authorFirstName} { docs.authorLastName }</p>
                 <button className={classes.Reply__button} >Replay</button>      
                   </div>
                   </div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classes from './QueryForm.module.css';
-// import { createCenter } from '../../../store/actions/centerActions'
-// import { connect } from 'react-redux'
+import { createQuery } from '../../store/actions/queryActions'
+import { connect } from 'react-redux'
 // import {Redirect } from 'react-router-dom'
 
 class QueryForm extends Component {
@@ -16,8 +16,8 @@ class QueryForm extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         console.log(this.state)
-        // this.props.createCenter(this.state)
-        // this.props.history.push('/internships')
+        this.props.createQuery(this.state)
+        this.props.history.push('/queries')
     }
     render() {
         // const auth = this.props.auth;
@@ -46,10 +46,10 @@ class QueryForm extends Component {
 //         auth:state.firebase.auth
 //     }
 // }
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//        createCenter:(center)=> dispatch(createCenter(center))
-//    } 
-// } 
+const mapDispatchToProps = (dispatch) => {
+    return {
+       createQuery:(Query)=> dispatch(createQuery(Query))
+   } 
+}
 
-export default QueryForm;
+export default connect(null,mapDispatchToProps)(QueryForm);
