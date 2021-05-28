@@ -17,6 +17,8 @@ import Events from './PostsEvents/Events/Events'
 import CreateEvent from './PostsEvents/Events/Event/CreateEvent'
 import EventDetails from './PostsEvents/Events/Event/EventDetails'
 import Images from './Images/images'
+import Queries from './Queries/Queries'
+import QueryForm from './Queries/Query/QueryForm'
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
           <Route path='/createevent' exact component={CreateEvent} />
           <Route path='/event/:id' exact component={EventDetails} />
           <Route path='/images' exact component={Images} />
+          <Route path='/queries' exact component={Queries}></Route>
+          <Route path='/queryform' exact component={QueryForm}></Route>
           <Route path='/' component={HomePage} />
 
         </Switch>  

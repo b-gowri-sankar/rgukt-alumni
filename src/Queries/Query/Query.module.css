@@ -1,0 +1,35 @@
+.Card {
+  box-sizing: border-box;
+  border: 3px solid black;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+.Description {
+  text-align: center;
+}
+.Author {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.Author__title {
+  color: brown;
+  margin-right: 20px;
+}
+
+.Reply__button {
+  background-color: #ca4740;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-right: 1rem;
+}

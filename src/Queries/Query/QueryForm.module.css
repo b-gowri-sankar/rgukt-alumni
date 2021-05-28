@@ -1,0 +1,90 @@
+.Container {
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 1);
+  height: 500px;
+  /* position: absolute; */
+  top: -50px;
+  width: 50%;
+  right: calc(50% - 50px);
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+  box-shadow: 0 0 15px 9px #00000096;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 50px;
+}
+
+.inputfield {
+  margin-top: 20px;
+}
+
+.inputField {
+  background-color: white !important;
+  color: black !important;
+  box-sizing: border-box;
+  border: 3px solid black !important;
+  border-radius: 10px !important;
+  box-shadow: 0 0 15px 9px #00000096 !important ;
+  text-shadow: #ca4740;
+  width: 100% !important;
+}
+
+.text_area {
+  background-color: white !important;
+  color: black !important;
+  box-sizing: border-box;
+  border: 3px solid black !important;
+  border-radius: 10px !important;
+  box-shadow: 0 0 15px 9px #00000096 !important ;
+  text-shadow: #ca4740;
+  width: 100% !important;
+  height: 200px !important;
+}
+
+.WebsiteName {
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1.1rem;
+  margin-top: 10px;
+  width: 100%;
+  background-color: #090b13;
+  color: white;
+  padding: 5px;
+  align-items: center;
+  border-radius: 10px;
+  text-shadow: black;
+}
+::placeholder {
+  color: black;
+  text-transform: uppercase;
+  padding: 10px;
+}
+input:not([type="submit"]):not([type="file"]) {
+  /* omg so much cleaner */
+  text-align: center;
+}
+
+input [type="text-area"] {
+  text-align: center;
+}
+
+.Label {
+  text-align: center;
+}
+
+.button {
+  margin: 0 auto;
+  display: block;
+  color: white;
+  background-color: #ca4740;
+  border: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 0 15px 9px #00000096 !important ;
+  cursor: pointer;
+}
+
+/* .Container{
+        box-shadow: ;
+    } */
