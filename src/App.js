@@ -19,6 +19,7 @@ import EventDetails from './PostsEvents/Events/Event/EventDetails'
 import Images from './Images/images'
 import Queries from './Queries/Queries'
 import QueryForm from './Queries/Query/QueryForm'
+import QueryDetails from './Queries/Query/QueryDetail'
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
           <Route path='/images' exact component={Images} />
           <Route path='/queries' exact component={Queries}></Route>
           <Route path='/queryform' exact component={QueryForm}></Route>
+          <Route path='/query/:id' exact component={QueryDetails}></Route>
           <Route path='/' component={HomePage} />
 
         </Switch>  
