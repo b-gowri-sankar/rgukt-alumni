@@ -1,57 +1,37 @@
 import React from 'react';
 import classes from './Query.module.css';
-import { connect } from 'react-redux';
-import { firestoreConnect } from 'react-redux-firebase';
-import { compose } from 'redux'
-// import UniqueDocument from '../../Images/hooks/UniqueDocument'
+import UniqueDocument from '../../Images/hooks/UniqueDocument';
+import QueryReply from './QueryReply/QueryReply'
 
 const QueryDetails = (props) => {
     console.log(props.match.params.id)
 
-    // const { doc } = UniqueDocument('queries', props.match.params.id);
+    const { doc } = UniqueDocument('queries', props.match.params.id);
     // console.log('This is documetns', doc.description)
 
-    const { query } = props;
-
-    // console.log(query)
-
-    if (query) {
+    if (doc) {
         return (
+            <div>
             <div className={classes.Card}>
                 <div className={classes.Description}>
-                    {query.description}
+                    {doc.description}
                 </div>
                 <div className={classes.Author}>
-                    <p className={classes.Author__title}>Posted By {query.authorFirstName} {query.authorLastName} </p>  
+                    <p className={classes.Author__title}>Posted By {doc.authorFirstName} {doc.authorLastName} </p>  
                 </div>
             </div>
+            <div>
+                <QueryReply />
+                </div>
+                </div>
         )
     }
     else {
         return (
-            <h1> It is Still Loading</h1>)
+            <h1> It is still loading ....</h1>
+        )
     }
     
 }
-const mapStateToProps = (state, ownProps ) => {
-    const id = ownProps.match.params.id;
-    // console.log(state)
-    const queries = state.firestore.data.queries;
-    // console.log(queries)
-    const query = queries ? queries[id] : null;
-    // console.log(query)
-    // console.log(centers)
-    // console.log(id)
-    return {
-        query: query,
-        auth:state.firebase.auth
 
-    }
-}
-
-export default compose(
-    connect(mapStateToProps),
-    firestoreConnect([
-        {collection:'queries'}
-    ])
-)(QueryDetails)
+export default QueryDetails;
