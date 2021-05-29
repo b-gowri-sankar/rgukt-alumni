@@ -4,7 +4,8 @@ import { firebaseReducer } from 'react-redux-firebase';
 import { firestoreReducer } from 'redux-firestore';
 import postReducer from './postReducer';
 import eventReducer from './eventReducer';
-import queryReducer from './queryReducer'
+import queryReducer from './queryReducer';
+import replyReducer from './replyReducer'
 
 import { combineReducers } from 'redux';
 
@@ -14,6 +15,7 @@ const rootReducers = combineReducers({
     event:eventReducer,
     auth: authReducer,
     query: queryReducer,
+    reply: replyReducer,
     center: centerReducer,
     firestore: firestoreReducer,
 })

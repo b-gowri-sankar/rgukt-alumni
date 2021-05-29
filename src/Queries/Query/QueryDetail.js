@@ -21,7 +21,7 @@ const QueryDetails = (props) => {
                 </div>
             </div>
             <div>
-                <QueryReply />
+                    <QueryReply id={ props.match.params.id}/>
                 </div>
                 </div>
         )
