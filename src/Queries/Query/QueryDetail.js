@@ -1,13 +1,14 @@
 import React from 'react';
 import classes from './Query.module.css';
 import UniqueDocument from '../../Images/hooks/UniqueDocument';
-import QueryReply from './QueryReply/QueryReply'
+import QueryReply from './QueryReply/QueryReply';
+import QueryReplyList from './QueryReplyList';
 
 const QueryDetails = (props) => {
     console.log(props.match.params.id)
 
     const { doc } = UniqueDocument('queries', props.match.params.id);
-    // console.log('This is documetns', doc.description)
+    
 
     if (doc) {
         return (
@@ -20,8 +21,11 @@ const QueryDetails = (props) => {
                     <p className={classes.Author__title}>Posted By {doc.authorFirstName} {doc.authorLastName} </p>  
                 </div>
             </div>
-            <div>
+                <div>
                     <QueryReply id={ props.match.params.id}/>
+                </div>
+                <div>
+                    <QueryReplyList id={ props.match.params.id }/>
                 </div>
                 </div>
         )
