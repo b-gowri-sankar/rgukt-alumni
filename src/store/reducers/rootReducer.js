@@ -6,6 +6,7 @@ import postReducer from './postReducer';
 import eventReducer from './eventReducer';
 import queryReducer from './queryReducer';
 import replyReducer from './replyReducer'
+// import profileReducer from './profileReducer'
 
 import { combineReducers } from 'redux';
 
@@ -16,6 +17,7 @@ const rootReducers = combineReducers({
     auth: authReducer,
     query: queryReducer,
     reply: replyReducer,
+    // profile: profileReducer,
     center: centerReducer,
     firestore: firestoreReducer,
 })

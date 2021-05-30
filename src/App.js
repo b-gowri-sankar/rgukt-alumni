@@ -20,6 +20,8 @@ import Images from './Images/images'
 import Queries from './Queries/Queries'
 import QueryForm from './Queries/Query/QueryForm'
 import QueryDetails from './Queries/Query/QueryDetail'
+import ProfileForm from './Profiles/Profile/Profileform';
+import Profiles from './Profiles/Profiles'
 
 function App() {
   return (
@@ -42,6 +44,8 @@ function App() {
           <Route path='/queries' exact component={Queries}></Route>
           <Route path='/queryform' exact component={QueryForm}></Route>
           <Route path='/query/:id' exact component={QueryDetails}></Route>
+          <Route path='/profileform' exact component={ProfileForm}></Route>
+          <Route path='/profiles' exact component={Profiles}></Route>
           <Route path='/' component={HomePage} />
 
         </Switch>  
