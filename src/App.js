@@ -22,6 +22,7 @@ import QueryForm from './Queries/Query/QueryForm'
 import QueryDetails from './Queries/Query/QueryDetail'
 import ProfileForm from './Profiles/Profile/Profileform';
 import Profiles from './Profiles/Profiles'
+import ProfileDetails from './Profiles/Profile/ProfileDetails'
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
           <Route path='/query/:id' exact component={QueryDetails}></Route>
           <Route path='/profileform' exact component={ProfileForm}></Route>
           <Route path='/profiles' exact component={Profiles}></Route>
+          <Route path='/profile/:id' eact component={ ProfileDetails } />
           <Route path='/' component={HomePage} />
 
         </Switch>  

@@ -19,6 +19,7 @@ const Profileform = ()=>{
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    console.log(fileUrl)
     const username = e.target.username.value;
     const branch = e.target.branch.value;
     const company = e.target.company.value;
@@ -42,7 +43,7 @@ const Profileform = ()=>{
         <input type="text" name="username" placeholder="NAME" />
         <input type="text" name="branch" placeholder="branch" />
         <input type="text" name="company" placeholder="company" />
-        <input type="text" name="biography" placeholder="biography" />
+        <textarea type='text' name='biography' placeholder='biography' />
         <button>Submit</button>
       </form>
     </>
