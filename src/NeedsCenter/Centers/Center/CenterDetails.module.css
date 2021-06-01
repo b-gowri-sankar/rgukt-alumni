@@ -1,9 +1,10 @@
 .CenterDetails {
   align-items: center;
   justify-content: center;
-  width: 100%;
+  max-width: 960px;
   padding: 10px;
   text-align: center;
+  margin: 0 auto;
 }
 
 .Center_card {

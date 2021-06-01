@@ -44,3 +44,13 @@
 .button:hover {
   background-color: #100555;
 }
+
+@media only screen and (max-width: 800px) {
+  .Queries {
+    display: block;
+  }
+
+  .Queries__title {
+    width: 90%;
+  }
+}

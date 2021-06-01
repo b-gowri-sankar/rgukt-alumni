@@ -33,3 +33,8 @@
   padding: 8px;
   text-align: center;
 }
+@media only screen and (max-width: 775px) {
+  .Centers {
+    display: block;
+  }
+}
