@@ -1,12 +1,24 @@
+.Events {
+  max-width: 960px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  /* display: flex; */
+  background-color: #f3f3f3;
+  padding: 40px;
+}
+.Events__right {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Events__right a {
+  width: 50%;
+}
+
 .EventsTitle {
   color: white;
-  width: 50%;
+  width: 80%;
   background-color: #ca4740;
   padding: 8px;
   text-align: center;
-}
-.Events {
-  width: 100%;
-  margin-right: 40px;
-  margin-left: 40px;
 }

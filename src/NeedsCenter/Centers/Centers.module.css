@@ -1,10 +1,32 @@
 .Centers {
+  max-width: 960px;
   width: 100%;
-  margin-right: 40px;
-  margin-left: 40px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  background-color: #f3f3f3;
+  padding: 40px;
 }
+
+.Centers__right {
+  width: 100%;
+  padding: 10px;
+}
+
+.Centers__left {
+  width: 100%;
+  padding: 10px;
+}
+
+.Centers > * :nth-child(1) {
+  flex: 1 1 30%;
+}
+.Centers > * :nth-child(2) {
+  flex: 1 1 70%;
+}
+
 .Centers__title {
-  width: 30%;
+  width: 100%;
   margin-top: 80px;
   color: white;
   background-color: #ca4740;

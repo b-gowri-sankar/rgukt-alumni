@@ -14,10 +14,10 @@ const Centers = (props) => {
         return <Redirect to='/signin'/>
     return (
         <div className={classes.Centers}>
-            <div>
-                <p className={classes.Centers__title}>Internships</p>
+            <div className={classes.Centers__right}>
+                <p className={classes.Centers__title}>All Internships</p>
             </div>
-            <div>
+            <div className={classes.Centers__left}>
                 {centers && centers.map(
                     center => (
                     <Link to={'/internship/' + center.id}>

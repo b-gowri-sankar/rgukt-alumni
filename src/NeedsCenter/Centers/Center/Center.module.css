@@ -1,11 +1,19 @@
 .center {
-  width: 90%;
+  /* width: 100%;
   background: white;
   border: 3px solid black;
   box-sizing: border-box;
   text-align: center;
   margin-bottom: 20px;
-  margin-right: 20px;
+  margin-right: 20px; */
+  background-color: #ffffff;
+  border-radius: 0.4rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid black;
 }
 .dupe {
   padding-top: 100px;
@@ -33,6 +41,6 @@
 }
 .center:hover {
   cursor: pointer;
-  transform: scale(1.03);
+  /* transform: scale(1.03); */
   box-shadow: 10px 10px 10px #004466;
 }

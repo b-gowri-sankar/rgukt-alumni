@@ -15,12 +15,16 @@ const Events = (props) => {
     console.log(events)
     return (
         <div className={classes.Events}>
-            <p className={classes.EventsTitle}>Events</p>
+            <div className={classes.Events__left}>
+                <p className={classes.EventsTitle}>Events</p>
+            </div>
+            <div className={classes.Events__right}>
             { events && events.map((event) => (
                 <Link to={'/event/'+event.id}>
                     <Event event={event} id={event.id} />
                     </Link>
             ))}
+            </div>
             {/* <Event />
             <Event />
             <Event /> */}

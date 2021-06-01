@@ -15,12 +15,16 @@ const Posts = (props) => {
         return <Redirect to='/signin'/>
     return (
         <div className={classes.PostCard}>
-            <p className={classes.PostsTitle}> News and Updates</p>
+            <div>
+                <p className={classes.PostsTitle}> News and Updates</p>
+            </div>
+            <div>
             { posts && posts.map((post) => (
                 <Link to={'/post/'+post.id}>
                     <Post post={post} id={post.id} />
                     </Link>
             ))}
+            </div>
                 {/* <Post />
                 <Post />
                 <Post />      */}
