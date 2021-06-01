@@ -40,12 +40,23 @@ const Profileform = ()=>{
   return (
     <div className={classes.Container}>
       <form onSubmit={onSubmit}>
-        <input type="file" onChange={onFileChange} />
-        <input type="text" name="username" placeholder="NAME" />
-        <input type="text" name="branch" placeholder="branch" />
-        <input type="text" name="company" placeholder="company" />
+        <div className={classes.inputfield}>
+          <input className={classes.inputField} type="file" onChange={onFileChange} />
+        </div>
+        <div className={classes.inputfield}>
+        <input  className={classes.inputField} type="text" name="username" placeholder="NAME" />
+        </div>
+        <div className={classes.inputfield}>
+        <input  className={classes.inputField} type="text" name="branch" placeholder="branch" />
+        </div>
+        <div className={classes.inputfield}>
+        <input className={classes.inputField}  type="text" name="company" placeholder="company" />
+
+        </div>
+        
+        
         <textarea type='text' name='biography' placeholder='biography' />
-        <button>Submit</button>
+        <button className={classes.button}>Submit</button>
       </form>
     </div>
   );

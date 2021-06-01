@@ -92,6 +92,17 @@ input [type="text-area"] {
   color: black;
 }
 
+@media only screen and (max-width: 750px) {
+  .Container {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 1080px) and (min-width: 750px) {
+  .Container {
+    width: 80%;
+  }
+}
+
 /* .Container{
         box-shadow: ;
     } */

@@ -26,3 +26,20 @@
   color: white;
   text-align: center;
 }
+@media only screen and (max-width: 750px) {
+  .Notifications {
+    display: block;
+  }
+  .Notifications div {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1080px) and (min-width: 750px) {
+  .Notifications {
+    display: block;
+  }
+
+  .Notifications div {
+    width: 100%;
+  }
+}
