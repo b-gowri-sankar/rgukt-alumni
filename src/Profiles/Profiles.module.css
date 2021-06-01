@@ -1,0 +1,16 @@
+.Profiles {
+  max-width: 960px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  /* display: flex; */
+  background-color: #f3f3f3;
+  padding: 40px;
+  color: black;
+}
+
+.Profiles__profile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}

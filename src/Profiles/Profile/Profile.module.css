@@ -1,29 +1,48 @@
 .card {
-  color: black;
+  /* color: black;
   box-shadow: 0 0 20px rgba(0, 0, 0, 02);
   max-width: 600px;
-  display: flex;
+  display: flex; */
   /* flex-direction: column; */
-  background-color: rgb(20, 50, 101);
+  /* background-color: rgb(20, 50, 101);
   color: white;
   text-align: center;
   padding: 2rem;
+  margin-top: 10px; */
+  padding: 10px;
+  border: 1px solid black;
+  background-color: white;
+  box-sizing: border-box;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   margin-top: 10px;
+  border-radius: 10px;
+  color: black;
+  display: flex;
+  height: fit-content;
 }
 
 .profilename {
   font-size: 2rem;
   line-height: 1.1;
   letter-spacing: 1px;
+  color: #ca4740;
 }
 
 .profileimage {
   border-radius: 50%;
   border: 2px solid white;
+  bottom: 0;
 }
 .profilemain {
   line-height: normal;
   justify-content: center;
+  margin: 0 auto;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.profileposition {
+  color: gray;
 }
 
 .profilesidebar {
