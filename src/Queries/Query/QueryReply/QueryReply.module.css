@@ -33,3 +33,19 @@
   padding-bottom: 1rem;
   margin-right: 1rem;
 }
+.Container {
+  margin-top: 20px;
+}
+
+.button {
+  margin-top: 10px;
+  background-color: #112a54;
+  border: black;
+  color: white;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.button:hover {
+  background-color: #100555;
+}

@@ -23,12 +23,14 @@ import QueryDetails from './Queries/Query/QueryDetail'
 import ProfileForm from './Profiles/Profile/Profileform';
 import Profiles from './Profiles/Profiles'
 import ProfileDetails from './Profiles/Profile/ProfileDetails'
+import Footer from './UI/footer/footer'
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
         <NavBar />
+        <Footer />
         <Switch>
           <Route path="/internships" exact component={Centers}></Route>
           <Route path='/internship/:id' exact component={CenterDetails}></Route>
@@ -49,7 +51,6 @@ function App() {
           <Route path='/profiles' exact component={Profiles}></Route>
           <Route path='/profile/:id' eact component={ ProfileDetails } />
           <Route path='/' component={HomePage} />
-
         </Switch>  
       </div>
     </BrowserRouter>

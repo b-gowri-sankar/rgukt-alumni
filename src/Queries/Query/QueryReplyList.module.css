@@ -1,8 +1,21 @@
 .QueryReplyList {
   height: fit-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .QueryReplyList__item {
-  border-bottom: 1px solid gray;
+  /* border-bottom: 1px solid gray; */
   padding: 10px;
+  border: 1px solid black;
+  background-color: white;
+  box-sizing: border-box;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.QueryReplyList span {
+  color: gray;
 }

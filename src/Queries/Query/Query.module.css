@@ -19,7 +19,7 @@
   margin-right: 20px;
 }
 
-.Reply__button {
+/* .Reply__button {
   background-color: #ca4740;
   cursor: pointer;
   color: white;
@@ -32,4 +32,17 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   margin-right: 1rem;
+} */
+.Reply__button {
+  margin-top: 10px;
+  background-color: #112a54;
+  border: black;
+  color: white;
+  padding: 10px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.Reply__button:hover {
+  background-color: #100555;
 }

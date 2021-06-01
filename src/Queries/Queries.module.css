@@ -6,7 +6,7 @@
   display: flex;
   background-color: #f3f3f3;
   padding: 40px;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .Queries__list {
@@ -16,9 +16,31 @@
 }
 
 .Queries__title {
-  height: max-content;
+  /* height: fit-content;
   color: white;
   background-color: #ca4740;
   /* padding: 10px; */
-  width: fit-content;
+  /* width: max-content; */
+  margin-top: 10px;
+  background-color: #112a54;
+  border: black;
+  color: white;
+  padding: 10px;
+  border-radius: 2px;
+  height: fit-content;
+  width: 200px;
+}
+
+.button {
+  margin-top: 10px;
+  background-color: #112a54;
+  border: black;
+  color: white;
+  padding: 10px;
+  border-radius: 2px;
+  width: 100px;
+}
+
+.button:hover {
+  background-color: #100555;
 }

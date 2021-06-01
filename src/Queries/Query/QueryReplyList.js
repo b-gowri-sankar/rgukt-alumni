@@ -14,10 +14,10 @@ const QueryReplyList = (props) => {
                 <li
                     className={classes.QueryReplyList__item}
                     key={doc.id}>
-                    {doc.description} posted by 
+                    {doc.description} posted by [
                     <span>
                           {doc.authorFirstName} {doc.authorLastName}
-                    </span>
+                    </span> ] 
                 </li>
             ))}
         </ul>
