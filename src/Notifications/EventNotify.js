@@ -15,7 +15,7 @@ const EventNotify = (props) => {
         return <Redirect to='/signin'/>
     return (
         <div>
-            <h4>Events</h4>
+            <h4 className={classes.internship__title}>Events</h4>
             { events && events.map((event) => (
                 <Link to={'/event/'+event.id}>
                     <Event event={event} id={event.id} />

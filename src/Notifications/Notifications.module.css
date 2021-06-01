@@ -2,7 +2,12 @@
   display: flex;
   margin-left: 40px;
   width: 100%;
+  /* flex-wrap: wrap; */
 }
+
+/* .Notifications div {
+  width: 33.3%;
+} */
 .Notifications > div {
   flex: 1; /*grow*/
   flex-basis: 100%;
@@ -10,4 +15,14 @@
 
 .Notifications > div {
   width: 300px;
+}
+
+.Notifications__box {
+  box-shadow: black;
+}
+
+.Notifications h4 {
+  background-color: rgb(202, 71, 64);
+  color: white;
+  text-align: center;
 }

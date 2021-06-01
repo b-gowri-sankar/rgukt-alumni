@@ -7,9 +7,15 @@ import classes from './Notifications.module.css'
 const Notifications = () => {
     return (
         <div className={classes.Notifications}>
-            <PostNotify />
-            <EventNotify />
-            <CenterNotify />
+            <div className={classes.Notifications__box}>
+                <PostNotify />
+            </div>
+            <div className={classes.Notifications__box}>
+                <EventNotify />
+            </div>
+            <div className={classes.Notifications__box}>
+                <CenterNotify />
+            </div>
         </div>
     )
 }

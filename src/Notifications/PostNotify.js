@@ -14,7 +14,7 @@ const PostNotify = (props) => {
         return <Redirect to='/signin'/>
     return (
         <div>
-            <h4>Posts</h4>
+            <h4 className={classes.internship__title}>Posts</h4>
             { posts && posts.map((post) => (
                 <Link to={'/post/'+post.id}>
                     <Post post={post} id={post.id} />

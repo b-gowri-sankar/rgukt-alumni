@@ -17,8 +17,8 @@ const CenterNotify = (props) => {
     if (!auth.uid)
         return <Redirect to='/signin'/>
     return (
-        <div>
-            <h4>Internships</h4>
+        <div className={classes.Container}>
+            <h4 className={classes.internship__title}>Internships</h4>
             <div>
             {centers && centers.map(
                     center => (
