@@ -17,3 +17,8 @@
 .log:hover {
   transform: scaleX(1.09);
 }
+@media (max-width: 500px) {
+  .SignedIn {
+    display: none;
+  }
+}

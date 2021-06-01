@@ -7,7 +7,7 @@ import { signOut } from '../store/actions/authActions'
 const SignedInLinks = (props) => {
     console.log("this is signed page",props)
     return (
-        <ul>
+        <ul className={classes.SignedIn}>
             <li className={classes.post}><NavLink to='/createintern'>New Post</NavLink></li>
             <li className={classes.log}><NavLink to='/' onClick={props.signOut}>Log Out</NavLink></li>
             <li className={classes.profile}><NavLink to='/'>{ props.profile.initials}</NavLink></li>
