@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from './Banner/Banner'
 import Notifications from './Notifications/Notifications'
 import classes from './HomePage.module.css'
+// import Input from './UI/input/input'
 
 const homePage = () => {
     console.log("we are in the homepage")
@@ -10,7 +11,7 @@ const homePage = () => {
             <Banner />
             <div className={classes.container}>
                 <Notifications />
-            </div> 
+            </div>
         </div>
     )
 }
