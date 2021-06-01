@@ -1,0 +1,31 @@
+.card {
+  color: black;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 02);
+  max-width: 600px;
+  display: flex;
+  /* flex-direction: column; */
+  background-color: rgb(20, 50, 101);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 10px;
+}
+
+.profilename {
+  font-size: 2rem;
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+.profileimage {
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.profilemain {
+  line-height: normal;
+  justify-content: center;
+}
+
+.profilesidebar {
+  margin: auto 0;
+}
