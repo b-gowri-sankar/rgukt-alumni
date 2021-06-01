@@ -1,7 +1,8 @@
 .Container {
   margin-top: 20px;
   background-color: rgba(255, 255, 255, 1);
-  height: 700px;
+  height: fit-content;
+  /* height: 700px; */
   /* position: absolute; */
   top: -50px;
   width: 50%;
@@ -18,7 +19,7 @@
   margin-top: 20px;
 }
 
-.inputField {
+/* .inputField {
   background-color: white !important;
   color: black !important;
   box-sizing: border-box;
@@ -27,9 +28,9 @@
   box-shadow: 0 0 15px 9px #00000096 !important ;
   text-shadow: #ca4740;
   width: 100% !important;
-}
+} */
 
-.text_area {
+/* .text_area {
   background-color: white !important;
   color: black !important;
   box-sizing: border-box;
@@ -39,7 +40,7 @@
   text-shadow: #ca4740;
   width: 100% !important;
   height: 100% !important;
-}
+} */
 
 .WebsiteName {
   text-align: center;
@@ -76,13 +77,19 @@ input [type="text-area"] {
   margin: 0 auto;
   display: block;
   color: white;
-  background-color: #ca4740;
+  background-color: black;
   border: white;
   padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
-  box-shadow: 0 0 15px 9px #00000096 !important ;
   cursor: pointer;
+  padding-left: 10px;
+}
+
+.button:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
 }
 
 /* .Container{

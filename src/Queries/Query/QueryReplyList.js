@@ -1,3 +1,4 @@
+import classes from './QueryReplyList.module.css';
 import React from 'react';
 import SameFieldDocuments from '../../Images/hooks/SameFieldDocuments'
 
@@ -8,9 +9,16 @@ const QueryReplyList = (props) => {
     console.log(docs)
     
     return (
-        <ul>
+        <ul className={classes.QueryReplyList}>
             {docs && docs.map((doc) => (
-                <li key={doc.id}> {doc.description} </li>
+                <li
+                    className={classes.QueryReplyList__item}
+                    key={doc.id}>
+                    {doc.description} posted by 
+                    <span>
+                          {doc.authorFirstName} {doc.authorLastName}
+                    </span>
+                </li>
             ))}
         </ul>
     )

@@ -1,0 +1,24 @@
+.Queries {
+  max-width: 960px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  background-color: #f3f3f3;
+  padding: 40px;
+  align-items: center;
+}
+
+.Queries__list {
+  width: 90%;
+  padding: 10px;
+  /* margin-left: 20px; */
+}
+
+.Queries__title {
+  height: max-content;
+  color: white;
+  background-color: #ca4740;
+  /* padding: 10px; */
+  width: fit-content;
+}

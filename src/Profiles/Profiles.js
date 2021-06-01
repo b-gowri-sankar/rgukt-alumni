@@ -8,9 +8,14 @@ const Profiles = () => {
     console.log(docs)
     return (
         <div>
+            <div>
+                <p>Profiles</p>
+        </div>
+        <div>
             { docs && docs.map((doc) => (
                 <Profile doc={doc}/>
             ))}
+            </div>
         </div>
     )
 }

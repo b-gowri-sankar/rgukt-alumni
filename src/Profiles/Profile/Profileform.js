@@ -1,3 +1,4 @@
+import classes from './Profileform.module.css'
 import React from "react";
 // import { app } from "./base";
 
@@ -37,7 +38,7 @@ const Profileform = ()=>{
 
 
   return (
-    <>
+    <div className={classes.Container}>
       <form onSubmit={onSubmit}>
         <input type="file" onChange={onFileChange} />
         <input type="text" name="username" placeholder="NAME" />
@@ -46,7 +47,7 @@ const Profileform = ()=>{
         <textarea type='text' name='biography' placeholder='biography' />
         <button>Submit</button>
       </form>
-    </>
+    </div>
   );
 }
 

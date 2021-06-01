@@ -1,0 +1,17 @@
+.QueryDetails {
+  max-width: 960px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #f3f3f3;
+  padding: 40px;
+}
+
+.Card {
+  /* line-height: 2px; */
+  border-bottom: 2px solid gray;
+}
+
+.Author__title {
+  color: gray;
+}

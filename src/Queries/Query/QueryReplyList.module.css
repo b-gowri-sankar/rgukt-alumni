@@ -1,0 +1,8 @@
+.QueryReplyList {
+  height: fit-content;
+}
+
+.QueryReplyList__item {
+  border-bottom: 1px solid gray;
+  padding: 10px;
+}
