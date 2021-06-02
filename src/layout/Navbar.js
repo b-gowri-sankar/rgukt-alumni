@@ -23,24 +23,24 @@ const navBar = (props) => {
               </a>
             </Logo>
             <NavMenu>
-            <a href="/">
-              <span>HOME</span>
-            </a>
-            <a  href="/">
-              <span>LIBRARY</span>
-            </a>
-            <a href="/">
-              <span>CAREERS</span>
-            </a>
-            <a href="/">
-              <span>PLACEMENT CELL</span>
-            </a>
-            <a href="/">
-              <span>CAMPUSES</span>
-            </a>
-            <a href="/">
-              <span>CONTACT US</span>
-          </a>
+            <Link to='/'>
+            <span>HOME</span>
+          </Link>
+            <Link to='/'>
+            <span>LIBRARY</span>
+          </Link>
+            <Link to='/'>
+            <span>CAREERS</span>
+          </Link>
+            <Link to='/'>
+            <span>PLACEMENT CELLS</span>
+          </Link>
+            <Link to='/'>
+            <span>CAMPUSES</span>
+          </Link>
+          <Link to='/'>
+            <span>CONTACT US</span>
+          </Link>
             <div className={classes.dropdown}>
               <Link to="/">
                 <span>CREATE</span>
