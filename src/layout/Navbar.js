@@ -3,6 +3,10 @@ import React from 'react';
 import SignedInLinks from './SignedIn';
 import SignIn from './signIn';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+
+import classes from './Navbar.module.css'
+import * as RiIcons from 'react-icons/ri'
 
 // import { Link } from 'react-router-dom'
 const navBar = (props) => {
@@ -11,7 +15,7 @@ const navBar = (props) => {
   const links = auth.uid ? <SignedInLinks /> : <SignIn />;
     return (
         <Nav>
-        <Logo>
+            <Logo>
             <a href='/'>
                 <span>
               RGUKTAA
@@ -36,7 +40,20 @@ const navBar = (props) => {
             </a>
             <a href="/">
               <span>CONTACT US</span>
-            </a>
+          </a>
+            <div className={classes.dropdown}>
+              <Link to="/">
+                <span>CREATE</span>
+                <RiIcons.RiArrowDownSFill />
+              </Link>
+              <div className={classes.dropdownContent}>
+                  <Link to='/createpost'>Post</Link>
+                  <Link to='/createintern'>Internship</Link>
+                  <Link to='/createevent'>Event</Link>
+                  <Link to='/profileform'>Profile</Link>
+                  <Link to='/queryform'>Query</Link>
+                </div>
+            </div>
             </NavMenu>
             {links}
         </Nav>
@@ -56,6 +73,9 @@ const Nav = styled.nav`
     padding: 0 36px;
     letter-spacing: 16px;
     z-index: 3;
+    @media (max-width: 936px) {
+      display: none;
+  }
 `;
 const Logo = styled.a`
   padding: 0;
@@ -118,13 +138,13 @@ const NavMenu = styled.div`
       }
     }
   }
-  @media (max-width: 1040px) {
+  /* @media (max-width: 1040px) {
     display: none;
-  }
+  } */
 `;
 
 const mapStateToProps = (state) => {
-  console.log(state);
+  // console.log(state);
   return {
     auth: state.firebase.auth
   }

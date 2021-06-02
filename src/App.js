@@ -25,6 +25,7 @@ import Profiles from './Profiles/Profiles'
 import ProfileDetails from './Profiles/Profile/ProfileDetails'
 import Footer from './UI/footer/footer'
 import ImagesNotify from './Notifications/Images/images'
+import Sidebar from './Components/SideBar/SideBar'
 // import spinner from './UI/spinner/spinner'
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <NavBar />
+        <Sidebar />
         <Footer />
         <Switch>
           <Route path="/internships" exact component={Centers}></Route>
@@ -54,6 +56,8 @@ function App() {
           <Route path='/profile/:id' exact component={ProfileDetails} />
           <Route path='/imagesnotify' exact component={ImagesNotify} />
           {/* <Route path='/spinner' exact component={ spinner } /> */}
+          {/* <Route path="/sidebar" exact component={Sidebar} /> */}
+
           <Route path='/' component={HomePage} />
         </Switch>  
       </div>
