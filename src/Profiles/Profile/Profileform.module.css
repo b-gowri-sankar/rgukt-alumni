@@ -92,6 +92,12 @@ input [type="text-area"] {
   color: black;
 }
 
+.button:disabled {
+  background-color: black;
+  color: gray;
+  border: 1px solid black;
+}
+
 @media only screen and (max-width: 750px) {
   .Container {
     width: 90%;

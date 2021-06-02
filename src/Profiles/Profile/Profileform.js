@@ -1,21 +1,35 @@
 import classes from './Profileform.module.css'
-import React from "react";
+import React, { useState} from "react";
 // import { app } from "./base";
+import Progress from '../../Images/Progress'
 
-import { fire,storage } from '../../config/fbConfig'
+import { fire } from '../../config/fbConfig'
 
 // const db = app.firestore();
 
-const Profileform = ()=>{
+const Profileform = (props) => {
+  const [file, setFile] = useState(null);
+  const [error, setError] = useState(null);
   const [fileUrl, setFileUrl] = React.useState(null);
+  const [value, setValue] = useState(true);
 //   const [users, setUsers] = React.useState([]);
+  const types=['image/png', 'image/jpeg', 'image/jpg']
 
-  const onFileChange = async (e) => {
-    const file = e.target.files[0];
-    const storageRef = storage.ref();
-    const fileRef = storageRef.child(file.name);
-    await fileRef.put(file);
-    setFileUrl(await fileRef.getDownloadURL());
+  const onFileChange = (e) => {
+    const selected = e.target.files[0];
+    if (selected && types.includes(selected.type)) {
+      setFile(selected);
+      setError(null)
+    }
+    else {
+      setFile(null);
+      setError("Please select an image file")
+    }
+    // const storageRef = storage.ref();
+    // const fileRef = storageRef.child(file.name);
+    // await fileRef.put(file);
+    // setFileUrl(await fileRef.getDownloadURL());
+    // console.log('The File is Created')
   };
 
   const onSubmit = async (e) => {
@@ -30,33 +44,42 @@ const Profileform = ()=>{
       avatar: fileUrl,
         branch: branch,
         company: company,
-      biography: biography
+      biography: biography,
+      createdAt: new Date()
       
     });
-    console.log("The Profile is Created")
+    // console.log("The Profile is Created")
+    props.history.push('/profiles')
   };
 
+  console.log(fileUrl)
+  console.log(value)
+ 
 
   return (
     <div className={classes.Container}>
       <form onSubmit={onSubmit}>
         <div className={classes.inputfield}>
-          <input className={classes.inputField} type="file" onChange={onFileChange} />
+          <input className={classes.inputField} type="file" onChange={onFileChange} required/>
+        </div>
+        {error &&<div className={classes.error}>{error}</div>}
+        {file && <div> {file.name}</div>}
+        {file && <Progress file={file} setFile={setFile} setFileUrl={setFileUrl} setValue={ setValue }/>}
+
+        <div className={classes.inputfield}>
+        <input  className={classes.inputField} type="text" name="username" placeholder="NAME" required/>
         </div>
         <div className={classes.inputfield}>
-        <input  className={classes.inputField} type="text" name="username" placeholder="NAME" />
+        <input  className={classes.inputField} type="text" name="branch" placeholder="branch" required/>
         </div>
         <div className={classes.inputfield}>
-        <input  className={classes.inputField} type="text" name="branch" placeholder="branch" />
-        </div>
-        <div className={classes.inputfield}>
-        <input className={classes.inputField}  type="text" name="company" placeholder="company" />
+        <input className={classes.inputField}  type="text" name="company" placeholder="company" required/>
 
         </div>
         
         
         <textarea type='text' name='biography' placeholder='biography' />
-        <button className={classes.button}>Submit</button>
+        <button className={classes.button} disabled={value}>Submit</button>
       </form>
     </div>
   );

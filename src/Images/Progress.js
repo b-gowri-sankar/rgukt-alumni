@@ -1,22 +1,22 @@
 import React, {useEffect} from 'react';
-import useStorage from './hooks/useStorage';
+import Storage from './hooks/Storage';
 import classes from './ProgressBar.module.css'
 
 import { motion } from 'framer-motion';
 
-const ProgressBar = ({ file, setFile }) => {
+const Progress = ({ file, setFile, setFileUrl, setValue }) => {
     
-    const { url, progress } = useStorage(file);
-
-    console.log("this is url",url)
+    const { url, progress } = Storage(file);
     
     // console.log(progress, url);
 
     useEffect(() => {
         if (url) {
             setFile(null)
+            setFileUrl(url)
+            setValue(false)
         }
-    },[url, setFile])
+    },[url, setFile, setFileUrl, setValue])
 
 
     return (
@@ -29,4 +29,4 @@ const ProgressBar = ({ file, setFile }) => {
 
 }
 
-export default ProgressBar;
+export default Progress;
