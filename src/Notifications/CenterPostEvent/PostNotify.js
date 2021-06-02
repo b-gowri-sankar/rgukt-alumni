@@ -2,16 +2,12 @@ import React from 'react'
 import { firestoreConnect } from 'react-redux-firebase'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
-import { Redirect } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import Post from '../PostsEvents/Posts/Post/Post'
+import Post from '../../PostsEvents/Posts/Post/Post'
 import classes from './PostNotify.module.css'
 
 const PostNotify = (props) => {
     const posts = props.post;
-    const auth = props.auth;
-    if (!auth.uid)
-        return <Redirect to='/signin'/>
     return (
         <div>
             <h4 className={classes.internship__title}>Posts</h4>

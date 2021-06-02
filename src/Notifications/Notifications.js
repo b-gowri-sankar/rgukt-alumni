@@ -1,7 +1,7 @@
 import React from 'react'
-import CenterNotify from './CenterNotify'
-import EventNotify from './EventNotify'
-import PostNotify from './PostNotify'
+import CenterNotify from './CenterPostEvent/CenterNotify'
+import EventNotify from './CenterPostEvent/EventNotify'
+import PostNotify from './CenterPostEvent/PostNotify'
 import classes from './Notifications.module.css'
 
 const Notifications = () => {
