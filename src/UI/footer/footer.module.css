@@ -7,4 +7,5 @@
   background-color: #090b13;
   color: white;
   text-align: center;
+  z-index: 999999999;
 }

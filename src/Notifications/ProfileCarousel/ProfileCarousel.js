@@ -2,16 +2,29 @@ import React from 'react'
 import { firestoreConnect } from 'react-redux-firebase'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
-import { Link } from 'react-router-dom'
-import ProfileNotify from './ProfileNotify'
+// import { Link } from 'react-router-dom'
+import ProfileNotify from '../../Profiles/Profile/Profile'
+import Carousel from 'react-elastic-carousel'
+
 
 const ProfileCarousel = (props) => {
     const { profiles } = props;
+
+    const breakPoints = [
+        { width: 500, itemsToShow:1},
+        { width: 768, itemsToShow:1},
+        { width: 1200, itemsToShow:2},
+        { width: 1500, itemsToShow:2},
+
+    ]
+
     return (
-        <div>
-            {profiles && profiles.map((profile) => {
-                <ProfileNotify doc={profile} key={ profile.id }/>
-            })}
+        <div className='ProfileCarousel'>
+            <Carousel breakPoints={breakPoints}>
+                {profiles && profiles.map((profile) => {
+                return <ProfileNotify doc={profile} key={ profile.id }/>
+                })}
+            </Carousel>
         </div>
     )
 }
