@@ -14,7 +14,7 @@ const Profiles = () => {
             </div>
             <div className={classes.Profiles__profile}>
             { docs && docs.map((doc) => (
-                <Profile doc={doc}/>
+                <Profile doc={doc} key={doc.id}/>
             ))}
             </div>
         </div>

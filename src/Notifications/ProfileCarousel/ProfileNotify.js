@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Profile.module.css'
 import { Link } from 'react-router-dom'
 
-const Profile = (props) => {
+const ProfileNotify = (props) => {
     return (
         <Link to={'profile/'+props.doc.id}>
             <div className={classes.card}>
@@ -16,12 +16,12 @@ const Profile = (props) => {
                 </div>
                 <div className={classes.profilemain}>
                     <h2 className={classes.profilename}>{ props.doc.name}</h2>
-                    <p className={classes.profileposition}>{props.doc.branch}</p>
-                    <p className={classes.profilebody}>{props.doc.company}</p>
+                    <p class={classes.profileposition}>{props.doc.branch}</p>
+                    <p class={classes.profilebody}>{props.doc.company}</p>
                 </div>
             </div>
         </Link>
     )
 }
 
-export default Profile;
+export default ProfileNotify;

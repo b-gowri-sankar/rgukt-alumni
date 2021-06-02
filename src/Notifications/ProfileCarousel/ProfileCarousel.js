@@ -3,11 +3,15 @@ import { firestoreConnect } from 'react-redux-firebase'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
 import { Link } from 'react-router-dom'
+import ProfileNotify from './ProfileNotify'
 
-const ProfileCarousel = () => {
+const ProfileCarousel = (props) => {
+    const { profiles } = props;
     return (
         <div>
-            
+            {profiles && profiles.map((profile) => {
+                <ProfileNotify doc={profile} key={ profile.id }/>
+            })}
         </div>
     )
 }
@@ -15,7 +19,7 @@ const ProfileCarousel = () => {
 const mapStateToProps = (state) => {
     // console.log("notification chamber",state.firestore.data.centers)
     return {
-        center: state.firestore.ordered.centers,
+        profiles: state.firestore.ordered.profiles,
         auth: state.firebase.auth
     }
 }

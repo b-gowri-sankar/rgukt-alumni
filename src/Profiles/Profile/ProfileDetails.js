@@ -1,6 +1,6 @@
 import React from 'react';
 import UniqueDocument from '../../Images/hooks/UniqueDocument'
-import spinner from '../../UI/spinner/spinner'
+import Spinner from '../../UI/spinner/spinner'
 
 const ProfileDetails = (props) => {
 
@@ -19,7 +19,7 @@ const ProfileDetails = (props) => {
     }
     else {
         return (
-            <spinner />
+            <Spinner />
         )
     }
 }
