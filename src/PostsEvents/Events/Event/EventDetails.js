@@ -4,14 +4,15 @@ import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux'
 import { Redirect } from 'react-router-dom';
+import spinner from '../../../UI/spinner/spinner'
 
 const EventDetails = (props) => {
     const { event } = props;
     const auth = props.auth;
     if (!auth.uid)
         return <Redirect to='/signin'/>
-
-    return (
+    if( event)
+    {return (
         <div className={classes.EventDetails}>
             <h4>Title:{event.title}</h4>
             <p>Date:{ event.date}</p>
@@ -19,6 +20,11 @@ const EventDetails = (props) => {
             <p>{event.content}</p>
         </div>
     );
+    }
+    else
+        return (
+            <spinner />
+        )
 }
 
 // const mapStateToProps = (state, ownProps ) => {

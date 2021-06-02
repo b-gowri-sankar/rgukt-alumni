@@ -12,11 +12,11 @@ import firebase from './config/fbConfig';
 import { createFirestoreInstance } from 'redux-firestore';
 import { useSelector } from 'react-redux'
 import { isLoaded } from 'react-redux-firebase'
-import loader from './UI/spinner/spinner'
+import spinner from './UI/spinner/spinner'
 
 function AuthIsLoaded({ children }) {
   const auth = useSelector(state => state.firebase.auth)
-  if (!isLoaded(auth)) return <loader />;
+  if (!isLoaded(auth)) return <spinner />;
   return children
 }
 

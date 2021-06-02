@@ -3,7 +3,9 @@ import classes from './CenterDetails.module.css'
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux'
-import {Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
+
+import spinner from '../../../UI/spinner/spinner'
 
 
 const CenterDetails = (props) => {
@@ -33,10 +35,7 @@ const CenterDetails = (props) => {
     }
     else {
         return (
-        // here you can use spinner
-        <div className={classes.Center_card}>
-            <h4>It is still Loading ....</h4>
-        </div>
+        <spinner />
         )
         
     }

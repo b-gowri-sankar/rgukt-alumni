@@ -3,7 +3,8 @@ import React from 'react'
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux'
-import {Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
+import spinner from '../../../UI/spinner/spinner'
 
 
 const PostDetails=(props)=>{
@@ -25,9 +26,7 @@ const PostDetails=(props)=>{
     else {
         return (
         // here you can use spinner
-        <div className={classes.PostDetails}>
-            <h4>It is still Loading ....</h4>
-        </div>
+        <spinner />
         )
         
     }

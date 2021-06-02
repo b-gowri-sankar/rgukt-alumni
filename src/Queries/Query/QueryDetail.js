@@ -3,6 +3,7 @@ import classes from './QueryDetail.module.css';
 import UniqueDocument from '../../Images/hooks/UniqueDocument';
 import QueryReply from './QueryReply/QueryReply';
 import QueryReplyList from './QueryReplyList';
+import spinner from '../../UI/spinner/spinner'
 
 const QueryDetails = (props) => {
     console.log(props.match.params.id)
@@ -34,7 +35,7 @@ const QueryDetails = (props) => {
     }
     else {
         return (
-            <h1> It is still loading ....</h1>
+            <spinner />
         )
     }
     
