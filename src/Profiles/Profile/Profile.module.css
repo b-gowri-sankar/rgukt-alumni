@@ -18,7 +18,9 @@
   border-radius: 10px;
   color: black;
   display: flex;
+  flex-wrap: wrap;
   height: fit-content;
+  /* overflow: hidden; */
 }
 
 .profilename {
@@ -26,6 +28,7 @@
   line-height: 1.1;
   letter-spacing: 1px;
   color: #ca4740;
+  width: 100%;
 }
 
 .profileimage {

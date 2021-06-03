@@ -14,7 +14,7 @@ const ProfileCarousel = (props) => {
 
     const breakPoints = [
         { width: 500, itemsToShow:1},
-        { width: 768, itemsToShow:1},
+        { width: 768, itemsToShow:2},
         { width: 1200, itemsToShow:2},
         { width: 1500, itemsToShow:2},
 
