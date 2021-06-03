@@ -6,7 +6,11 @@ const footer = () => {
         <div className={classes.footer}>
             <p>
                 <i>
-                    © 2021 Rajiv Gandhi University of Knowledge Technologies, All Rights Reserved .
+                    © 2021 Rajiv Gandhi University of Knowledge Technologies
+                </i>
+                <div></div>
+                <i>
+                All Rights Reserved .
                 </i>
             </p>
         </div>
