@@ -3,13 +3,19 @@ import classes from './QueryDetail.module.css';
 import UniqueDocument from '../../Images/hooks/UniqueDocument';
 import QueryReply from './QueryReply/QueryReply';
 import QueryReplyList from './QueryReplyList';
-import spinner from '../../UI/spinner/spinner'
+import Spinner from '../../UI/spinner/spinner'
+import { Redirect } from 'react-router-dom'
+import { connect } from 'react-redux';
+
 
 const QueryDetails = (props) => {
     console.log(props.match.params.id)
 
     const { doc } = UniqueDocument('queries', props.match.params.id);
-    
+    const auth = props.auth;
+    if (!auth.uid)
+        return <Redirect to='/signin'/>
+
 
     if (doc) {
         return (
@@ -35,10 +41,16 @@ const QueryDetails = (props) => {
     }
     else {
         return (
-            <spinner />
+            <Spinner />
         )
     }
     
 }
 
-export default QueryDetails;
+const mapStateToProps = (state) => {
+    return {
+      auth:state.firebase.auth
+    }
+  }
+  
+  export default connect(mapStateToProps)(QueryDetails);

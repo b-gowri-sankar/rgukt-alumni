@@ -2,11 +2,16 @@ import React from 'react';
 import UniqueDocument from '../../Images/hooks/UniqueDocument'
 import Spinner from '../../UI/spinner/spinner'
 import classes from './ProfileDetails.module.css'
+import { Redirect } from 'react-router-dom'
+import { connect } from 'react-redux';
 
 const ProfileDetails = (props) => {
 
     const { doc } = UniqueDocument('profiles', props.match.params.id);
-    console.log(doc)
+    // console.log(doc)
+    const auth = props.auth;
+    if (!auth.uid)
+            return <Redirect to='/signin'/>
     if(doc)
     {return (
         <div className={classes.wrapper}>
@@ -32,4 +37,10 @@ const ProfileDetails = (props) => {
     }
 }
 
-export default ProfileDetails;
+const mapStateToProps = (state) => {
+    return {
+      auth:state.firebase.auth
+    }
+  }
+  
+  export default connect(mapStateToProps)(ProfileDetails);

@@ -3,10 +3,15 @@ import Profile from './Profile/Profile'
 // import { fire } from '../config/fbConfig'
 import useFirestored from '../Images/hooks/useFirestored';
 import classes from './Profiles.module.css'
-
-const Profiles = () => {
+import { Redirect } from 'react-router-dom'
+import { connect } from 'react-redux';
+const Profiles = (props) => {
     const { docs } = useFirestored('profiles');
-    console.log(docs)
+    // console.log(docs)
+    const auth = props.auth;
+    if (!auth.uid)
+            return <Redirect to='/signin'/>
+
     return (
         <div className={classes.Profiles}>
             <div>
@@ -21,4 +26,10 @@ const Profiles = () => {
     )
 }
 
-export default Profiles;
+const mapStateToProps = (state) => {
+    return {
+      auth:state.firebase.auth
+    }
+  }
+  
+  export default connect(mapStateToProps)(Profiles);

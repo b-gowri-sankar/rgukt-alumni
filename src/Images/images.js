@@ -4,13 +4,19 @@ import classes from './Images.module.css';
 import ProgressBar from './ProgressBar';
 import ImageGrid from './ImageGrid';
 import Modal from './Modal';
+import { Redirect } from 'react-router-dom'
+import { connect } from 'react-redux';
 
-function App() {
+
+const Images = (props) => {
   const [file, setFile] = useState(null);
   const [error, setError] = useState(null);
   const [selectedImg, setSelectedImg] = useState(null);
 
-  const types=['image/png', 'image/jpeg', 'image/jpg']
+  const types = ['image/png', 'image/jpeg', 'image/jpg']
+  const auth = props.auth;
+  if (!auth.uid)
+        return <Redirect to='/signin'/>
 
   const onSubmit = () => {
     
@@ -56,4 +62,10 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    auth:state.firebase.auth
+  }
+}
+
+export default connect(mapStateToProps)(Images);

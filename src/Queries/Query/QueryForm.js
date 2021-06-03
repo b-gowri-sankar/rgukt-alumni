@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classes from './QueryForm.module.css';
 import { createQuery } from '../../store/actions/queryActions'
 import { connect } from 'react-redux'
-// import {Redirect } from 'react-router-dom'
+import {Redirect } from 'react-router-dom'
 
 class QueryForm extends Component {
     state = {
@@ -20,9 +20,9 @@ class QueryForm extends Component {
         this.props.history.push('/queries')
     }
     render() {
-        // const auth = this.props.auth;
-        // if (!auth.uid)
-        //     return <Redirect to='/signin'/>
+        const auth = this.props.auth;
+        if (!auth.uid)
+            return <Redirect to='/signin'/>
         return (
             <div className={classes.Container}>
                 <div className={classes.WebsiteName}>
@@ -41,15 +41,17 @@ class QueryForm extends Component {
         )
     }
 }
-// const mapStateToProps = (state) => {
-//     return {
-//         auth:state.firebase.auth
-//     }
-// }
+const mapStateToProps = (state) => {
+    return {
+        auth:state.firebase.auth
+    }
+}
+
+
 const mapDispatchToProps = (dispatch) => {
     return {
        createQuery:(Query)=> dispatch(createQuery(Query))
    } 
 }
 
-export default connect(null,mapDispatchToProps)(QueryForm);
+export default connect(mapStateToProps,mapDispatchToProps)(QueryForm);

@@ -13,7 +13,7 @@ const PostNotify = (props) => {
             <h4 className={classes.internship__title}>Posts</h4>
             { posts && posts.map((post) => (
                 <Link to={'/post/'+post.id}>
-                    <Post post={post} id={post.id} />
+                    <Post post={post} id={post.id} key={post.id}/>
                     </Link>
             ))}
             <Link to='/posts'>

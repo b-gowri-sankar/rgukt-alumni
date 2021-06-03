@@ -2,6 +2,9 @@ import './App.css';
 // import PostsEvents from './PostsEvents/PostsEvents';
 // import Banner from './Banner/Banner'
 // import NeedsCenter from './NeedsCenter/NeedsCenter'
+// import { Redirect } from 'react-router-dom'
+
+// import { connect } from 'react-redux';
 import Centers from './NeedsCenter/Centers/Centers'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NavBar from './layout/Navbar';
@@ -28,7 +31,11 @@ import Footer from './UI/footer/footer'
 import Sidebar from './Components/SideBar/SideBar'
 // import spinner from './UI/spinner/spinner'
 
-function App() {
+const App = (  ) => {
+
+  // const auth = props.auth;
+
+  // if (!auth.uid) return <Redirect to='/signin'/>
   return (
     <BrowserRouter>
       <div className="App">
@@ -64,5 +71,13 @@ function App() {
     </BrowserRouter>
   );
 }
+
+// const mapStateToProps = (state) => {
+//   // console.log('state',state.firebase.auth)
+//   return {
+//     auth:state.firebase.auth
+//   }
+// }
+
 
 export default App;

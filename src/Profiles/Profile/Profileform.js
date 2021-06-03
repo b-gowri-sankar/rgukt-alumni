@@ -4,6 +4,8 @@ import React, { useState} from "react";
 import Progress from '../../Images/Progress'
 
 import { fire } from '../../config/fbConfig'
+import { Redirect } from 'react-router-dom'
+import { connect } from 'react-redux';
 
 // const db = app.firestore();
 
@@ -55,7 +57,9 @@ const Profileform = (props) => {
   console.log(fileUrl)
   console.log(value)
  
-
+  const auth = props.auth;
+  if (!auth.uid)
+        return <Redirect to='/signin'/>
   return (
     <div className={classes.Container}>
       <form onSubmit={onSubmit}>
@@ -85,4 +89,10 @@ const Profileform = (props) => {
   );
 }
 
-export default Profileform;
+const mapStateToProps = (state) => {
+  return {
+    auth:state.firebase.auth
+  }
+}
+
+export default connect(mapStateToProps)(Profileform);
