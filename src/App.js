@@ -24,7 +24,7 @@ import ProfileForm from './Profiles/Profile/Profileform';
 import Profiles from './Profiles/Profiles'
 import ProfileDetails from './Profiles/Profile/ProfileDetails'
 import Footer from './UI/footer/footer'
-import ImagesNotify from './Notifications/Images/images'
+// import ImagesNotify from './Notifications/Images/images'
 import Sidebar from './Components/SideBar/SideBar'
 // import spinner from './UI/spinner/spinner'
 
@@ -54,7 +54,7 @@ function App() {
           <Route path='/profileform' exact component={ProfileForm}></Route>
           <Route path='/profiles' exact component={Profiles}></Route>
           <Route path='/profile/:id' exact component={ProfileDetails} />
-          <Route path='/imagesnotify' exact component={ImagesNotify} />
+          {/* <Route path='/imagesnotify' exact component={ImagesNotify} /> */}
           {/* <Route path='/spinner' exact component={ spinner } /> */}
           {/* <Route path="/sidebar" exact component={Sidebar} /> */}
 

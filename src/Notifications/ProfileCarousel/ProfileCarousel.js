@@ -6,6 +6,8 @@ import { compose } from 'redux'
 import ProfileNotify from '../../Profiles/Profile/Profile'
 import Carousel from 'react-elastic-carousel'
 
+import classes from './ProfileCarousel.module.css'
+
 
 const ProfileCarousel = (props) => {
     const { profiles } = props;
@@ -19,7 +21,7 @@ const ProfileCarousel = (props) => {
     ]
 
     return (
-        <div className='ProfileCarousel'>
+        <div className={classes.ProfileCarousel}>
             <Carousel breakPoints={breakPoints}>
                 {profiles && profiles.map((profile) => {
                 return <ProfileNotify doc={profile} key={ profile.id }/>
