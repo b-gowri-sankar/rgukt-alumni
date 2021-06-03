@@ -13,6 +13,30 @@ const navBar = (props) => {
   const { auth } = props;
   //console.log(auth);
   const links = auth.uid ? <SignedInLinks /> : <SignIn />;
+  const create = auth.uid ? <div className={classes.dropdown}>
+    <Link to="/">
+      <span>CREATE</span>
+      <RiIcons.RiArrowDownSFill />
+    </Link>
+    <div className={classes.dropdownContent}>
+      <Link to='/createpost'>Post</Link>
+      <Link to='/createintern'>Internship</Link>
+      <Link to='/createevent'>Event</Link>
+      <Link to='/profileform'>Profile</Link>
+      <Link to='/queryform'>Query</Link>
+    </div>
+  </div> : null;
+  const Chapters = auth.uid ? <div className={classes.dropdown}>
+  <Link to="/">
+    <span>Chapters</span>
+    <RiIcons.RiArrowDownSFill />
+  </Link>
+  <div className={classes.dropdownContent}>
+    <Link to='/images'>Gallery</Link>
+    <Link to='/profiles'>Profiles</Link>
+    <Link to='/queries'>Queries</Link>
+  </div>
+</div> : null;
     return (
         <Nav>
             <Logo>
@@ -38,22 +62,8 @@ const navBar = (props) => {
             <Link to='/'>
             <span>CAMPUSES</span>
           </Link>
-          <Link to='/'>
-            <span>CONTACT US</span>
-          </Link>
-            <div className={classes.dropdown}>
-              <Link to="/">
-                <span>CREATE</span>
-                <RiIcons.RiArrowDownSFill />
-              </Link>
-              <div className={classes.dropdownContent}>
-                  <Link to='/createpost'>Post</Link>
-                  <Link to='/createintern'>Internship</Link>
-                  <Link to='/createevent'>Event</Link>
-                  <Link to='/profileform'>Profile</Link>
-                  <Link to='/queryform'>Query</Link>
-                </div>
-            </div>
+            {Chapters}
+            {create}
             </NavMenu>
             {links}
         </Nav>
