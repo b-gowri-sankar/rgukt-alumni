@@ -1,6 +1,7 @@
 import React from 'react';
 import UniqueDocument from '../../Images/hooks/UniqueDocument'
 import Spinner from '../../UI/spinner/spinner'
+import classes from './ProfileDetails.module.css'
 
 const ProfileDetails = (props) => {
 
@@ -8,12 +9,19 @@ const ProfileDetails = (props) => {
     console.log(doc)
     if(doc)
     {return (
-        <div>
-            <img width="100" height="100" src={ doc.avatar } alt={doc.id} />
-            <p>{doc.name}</p>
-            <p>{doc.branch}</p>
-            <p>{doc.company}</p>
-            <p>{doc.biography}</p>
+        <div className={classes.wrapper}>
+            <div className={classes.left}>
+                <img src={ doc.avatar } alt={doc.id} width="100" />
+                <h4>{doc.name}</h4>
+                <p>{doc.branch}</p>
+                <p>{doc.company}</p>
+            </div>
+            <div className={classes.right}>
+        <       div className={classes.info}>
+                    <h5 className={classes.header}>biography</h5>
+                </div>
+      	        {doc.biography}
+            </div>
         </div>
     )
     }
