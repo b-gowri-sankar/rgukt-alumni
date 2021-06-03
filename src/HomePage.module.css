@@ -25,5 +25,7 @@
 .header {
   background-color: #143265;
   color: white;
-  width: fit-content;
+  width: max-content;
+  padding-left: 2px;
+  padding-right: 2px;
 }
