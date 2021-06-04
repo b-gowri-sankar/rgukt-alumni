@@ -1,0 +1,37 @@
+.Event {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  padding: 8px;
+  text-align: center;
+  /* margin-bottom: 20px; */
+  color: white;
+  /* margin-right: 80px; */
+}
+.DateContainer {
+  background: #004466;
+  border-radius: 10px;
+  padding: 8px;
+}
+.TitleContainer {
+  margin-left: 10px;
+}
+.Title {
+  color: #ca4740;
+  font-weight: bold;
+}
+.Date {
+  color: #ca4740;
+  font-weight: bold;
+}
+.EventMode {
+  background-color: gray;
+}
+.Event:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+  box-shadow: 10px 10px 10px #004466;
+}

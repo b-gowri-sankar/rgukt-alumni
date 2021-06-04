@@ -3,14 +3,14 @@ import { firestoreConnect } from 'react-redux-firebase'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
 import { Link } from 'react-router-dom'
-import Event from '../../PostsEvents/Events/Event/Event'
+import Event from './CenterPostEvents/Event'
 import classes from './PostNotify.module.css'
 
 
 const EventNotify = (props) => {
     const events = props.event;
     return (
-        <div>
+        <div className={classes.EventNotify}>
             <h4 className={classes.internship__title}>Events</h4>
             { events && events.map((event) => (
                 <Link to={'/event/'+event.id}>

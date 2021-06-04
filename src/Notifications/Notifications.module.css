@@ -1,7 +1,8 @@
 .Notifications {
   display: flex;
-  margin-left: 40px;
+  /* margin-left: 40px; */
   width: 100%;
+  justify-content: space-evenly;
   /* flex-wrap: wrap; */
 }
 
@@ -19,6 +20,7 @@
 
 .Notifications__box {
   box-shadow: black;
+  margin-right: 20px;
 }
 
 .Notifications h4 {
