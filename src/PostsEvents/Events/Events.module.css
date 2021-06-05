@@ -5,22 +5,27 @@
   margin-left: auto;
   /* display: flex; */
   background-color: #f3f3f3;
-  padding: 40px;
+  /* padding: 40px; */
+  /* margin-bottom: 20px; */
 }
 .Events__right {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 60px;
 }
 .Events__right a {
   width: 50%;
 }
 
 .EventsTitle {
-  color: white;
-  width: 80%;
-  background-color: #ca4740;
-  padding: 8px;
+  color: gray;
+  width: 100%;
+  /* background-color: #ca4740; */
+  /* padding: 8px; */
+  font-weight: normal;
   text-align: center;
+  font-size: 3.2rem;
+  border-bottom: 1px solid gray;
 }
 
 @media only screen and (max-width: 800px) {

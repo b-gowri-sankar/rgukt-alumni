@@ -3,11 +3,13 @@
 }
 .log {
   letter-spacing: 0.1rem;
+  font-size: 1vw;
 }
 .profile {
   letter-spacing: 0.3rem;
   background-color: #ca4740;
   border-radius: 50%;
+  font-size: 1vw;
 }
 
 .post:hover {

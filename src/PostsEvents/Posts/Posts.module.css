@@ -8,13 +8,18 @@
   padding: 40px;
 }
 
-.PostCard div {
+/* .PostCard div {
   width: 100%;
+} */
+
+.Posts {
+  width: 100%;
+  margin-left: 20px;
 }
 
 .PostsTitle {
   color: white;
-  width: 80%;
+  /* width: 80%; */
   background-color: #ca4740;
   padding: 8px;
   text-align: center;

@@ -104,6 +104,17 @@ const List = styled.div`
         color: white !important;
         padding: 10px;
         border-radius: 50%;
+        font-size: 3vw;
+    }
+    @media (max-width: 410px){
+        ul > li > a{
+            font-size: 2.5vw;
+            letter-spacing: normal;
+            /* margin-left: 0px; */
+        }
+        ul >li {
+            margin-left: 0px;
+        }
     }
 `;
 

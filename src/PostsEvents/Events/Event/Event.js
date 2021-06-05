@@ -6,7 +6,6 @@ const Event = (props) => {
     return (
         <div className={classes.Event}>
             <div className={classes.DateContainer}>
-                
                 <p className={classes.Date}> {props.event.date}</p>
             </div>
             <div className={classes.TitleContainer}>

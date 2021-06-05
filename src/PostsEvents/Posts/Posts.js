@@ -18,7 +18,7 @@ const Posts = (props) => {
             <div>
                 <p className={classes.PostsTitle}> News and Updates</p>
             </div>
-            <div>
+            <div className={classes.Posts}>
             { posts && posts.map((post) => (
                 <Link to={'/post/'+post.id}>
                     <Post post={post} id={post.id} />
