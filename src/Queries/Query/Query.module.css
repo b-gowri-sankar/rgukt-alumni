@@ -1,12 +1,17 @@
 .Card {
   box-sizing: border-box;
-  border: 3px solid black;
+  border: 1px solid gray;
   width: 100%;
   padding: 10px;
   margin-bottom: 30px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
 }
 .Description {
   text-align: center;
+  font-weight: bold;
+  /* letter-spacing: 0.2rem; */
 }
 .Author {
   display: flex;
@@ -39,7 +44,7 @@
   border: black;
   color: white;
   padding: 10px;
-  border-radius: 2px;
+  border-radius: 4px;
   cursor: pointer;
 }
 

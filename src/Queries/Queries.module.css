@@ -12,23 +12,26 @@
 .Queries__list {
   width: 90%;
   padding: 10px;
+  flex: 2 1 0;
+  margin-bottom: 40px;
   /* margin-left: 20px; */
 }
-
 .Queries__title {
-  /* height: fit-content;
-  color: white;
-  background-color: #ca4740;
-  /* padding: 10px; */
-  /* width: max-content; */
-  margin-top: 10px;
-  background-color: #112a54;
-  border: black;
-  color: white;
-  padding: 10px;
-  border-radius: 2px;
+  width: 100%;
+  flex: 1 1 0;
+  /* height: fit-content; */
+}
+
+.Queries__title > p {
+  width: 100%;
+  background-color: #100555;
   height: fit-content;
-  width: 200px;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
 }
 
 .button {
