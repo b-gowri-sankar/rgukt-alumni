@@ -14,8 +14,12 @@ const Posts = (props) => {
     if (!auth.uid)
         return <Redirect to='/signin'/>
     return (
+        <>
+            <div className={classes.Heading}>
+                <h3>The News And Updates</h3>
+            </div>
         <div className={classes.PostCard}>
-            <div>
+            <div className={classes.Posts__left}>
                 <p className={classes.PostsTitle}> News and Updates</p>
             </div>
             <div className={classes.Posts}>
@@ -28,7 +32,8 @@ const Posts = (props) => {
                 {/* <Post />
                 <Post />
                 <Post />      */}
-        </div>
+            </div>
+        </>
     );
 }
 

@@ -7,14 +7,25 @@
   background-color: #f3f3f3;
   padding: 40px;
 }
-
+.Heading {
+  color: gray;
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
 /* .PostCard div {
   width: 100%;
 } */
+.Posts__left {
+  width: 100%;
+  /* margin-left: 10px; */
+  flex: 1 1 0;
+}
 
 .Posts {
   width: 100%;
   margin-left: 20px;
+  flex: 2 1 0;
+  margin-bottom: 40px;
 }
 
 .PostsTitle {
