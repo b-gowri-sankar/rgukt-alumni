@@ -5,12 +5,21 @@
   margin-left: auto;
   /* display: flex; */
   background-color: #f3f3f3;
-  padding: 40px;
+  /* padding: 40px; */
   color: black;
+  margin-bottom: 80px;
+}
+
+.Profile__title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: gray;
+  border-bottom: 1px solid gray;
 }
 
 .Profiles__profile {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  /* margin-bottom: 60px; */
 }

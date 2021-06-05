@@ -14,8 +14,8 @@ const Profiles = (props) => {
 
     return (
         <div className={classes.Profiles}>
-            <div>
-                <p>Profiles</p>
+            <div className={classes.Profile__title__div}>
+                <p className={classes.Profile__title}>Profiles</p>
             </div>
             <div className={classes.Profiles__profile}>
             { docs && docs.map((doc) => (
