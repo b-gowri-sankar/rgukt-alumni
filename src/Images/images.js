@@ -43,10 +43,10 @@ const Images = (props) => {
         <h1 className={classes.thetitle}> The RGUKT ALUMNI</h1>
       </div>
       <form onSubmit={onSubmit} className={classes.imageform}>
-        <h6>click here </h6>
+        {/* <h6>click here </h6> */}
       <label className={classes.label__name}>
         <input type="file" onChange={changeHandler} />
-          <span>+</span>
+          {/* <span>+</span> */}
         </label>
       </form>
       <div className={classes.output}>

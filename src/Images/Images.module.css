@@ -8,26 +8,27 @@
   background-color: #090b13;
   color: white;
   text-align: center;
-  font-size: 500;
+  font-size: 300;
 }
 
 .Images {
   max-width: 960px;
   margin: 0 auto;
+  margin-bottom: 70px;
 }
 
-.imageform {
+/* .imageform {
   margin: 30px auto 10px;
   text-align: center;
-}
+} */
 
-.label__name input {
+/* .label__name input {
   height: 0;
   width: 0;
   opacity: 0;
-}
+} */
 
-.label__name {
+/* .label__name {
   display: block;
   width: 30px;
   height: 30px;
@@ -43,7 +44,7 @@
 .label__name:hover {
   background: var(--primary);
   color: white;
-}
+} */
 
 .grid {
   display: grid;
