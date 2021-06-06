@@ -84,14 +84,17 @@
 @media only screen and (max-width: 1080px) and (min-width: 750px) {
   .Flex {
     display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
   }
-  .header {
+  /* .header {
     margin-left: 20px;
   }
 
   .title {
     margin-left: 20px;
-  }
+  } */
   .Flex > div {
     margin: 4px auto;
     /* max-width: 400px; */
@@ -105,16 +108,24 @@
 @media only screen and (max-width: 750px) {
   .Flex {
     display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* margin-bottom: 20px; */
   }
-  .header {
+  /* .header {
     margin-left: 10px;
   }
 
   .title {
-    margin-left: 20px;
+    margin-left: 10px;
+  } */
+  .ProfileCarousel {
+    margin-bottom: 10px;
   }
   .Flex > div {
     margin: 0 auto;
+    margin-top: 20px;
+
     /* max-width: 400px; */
   }
 
