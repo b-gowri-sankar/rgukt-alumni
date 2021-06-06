@@ -62,6 +62,26 @@ export const SideBarData = [
             },
 
         ]
+    },{
+        title: 'Chapter',
+        path: '#',
+        iconClosed: <RiIcons.RiArrowDownSFill />,
+        iconOpened: <RiIcons.RiArrowUpSFill />,
+        subNav: [
+            {
+                title: 'Gallery',
+                path:'/images'
+            },
+            {
+                title: 'Profiles',
+                path:'/profiles'
+            },
+            {
+                title: 'Queries',
+                path:'/queries'
+            }
+
+        ]
     }
 
 ]
