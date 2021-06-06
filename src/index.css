@@ -15,3 +15,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* square buttons */
+.rec.rec-arrow {
+  display: none;
+}
+/* round buttons on hover */
+.rec.rec-arrow:hover {
+  border-radius: 50%;
+}

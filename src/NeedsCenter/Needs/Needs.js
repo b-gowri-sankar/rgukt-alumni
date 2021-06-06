@@ -7,12 +7,26 @@ import classes from './Needs.module.css';
 const Needs = (props) => {
   let settings = {
     dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-  };
+      infinite: false,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 320,
+          settings: { slidesToShow: 1, slidesToScroll: 1, infinite: false }
+        },
+        {
+          breakpoint: 768,
+          settings: { slidesToShow: 1, slidesToScroll: 1, infinite: false }
+        },
+        {
+          breakpoint: 1024,
+          settings: { slidesToShow: 1, slidesToScroll: 1, infinite: false }
+        }
+      ]
+    };
   return (
       <Carousel {...settings}>
           <Wrap>
@@ -25,7 +39,7 @@ const Needs = (props) => {
                 <button className={classes.Reply__button} >Replay</button>      
                   </div>
                   </div>
-      </Wrap>
+        </Wrap>
 
         <Wrap>
         <div className={classes.Card}>

@@ -27,6 +27,7 @@ import ProfileForm from './Profiles/Profile/Profileform';
 import Profiles from './Profiles/Profiles'
 import ProfileDetails from './Profiles/Profile/ProfileDetails'
 import Footer from './UI/footer/footer'
+// import Needs from './NeedsCenter/Needs/Needs'
 // import ImagesNotify from './Notifications/Images/images'
 import Sidebar from './Components/SideBar/SideBar'
 // import spinner from './UI/spinner/spinner'
@@ -63,7 +64,7 @@ const App = (  ) => {
           <Route path='/profile/:id' exact component={ProfileDetails} />
           {/* <Route path='/imagesnotify' exact component={ImagesNotify} /> */}
           {/* <Route path='/spinner' exact component={ spinner } /> */}
-          {/* <Route path="/sidebar" exact component={Sidebar} /> */}
+          {/* <Route path="/needs" exact component={Needs} /> */}
 
           <Route path='/' component={HomePage} />
         </Switch>  
