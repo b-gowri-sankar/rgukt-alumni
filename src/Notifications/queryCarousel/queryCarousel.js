@@ -3,7 +3,7 @@ import { firestoreConnect } from 'react-redux-firebase'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
 // import { Link } from 'react-router-dom'
-import QueryNotify from '../../Queries/Query/Query'
+import QueryNotify from './Query/Query'
 import Carousel from 'react-elastic-carousel'
 import Spinner from '../../UI/spinner/spinner'
 import classes from './queryCaousel.module.css'
@@ -14,7 +14,7 @@ import classes from './queryCaousel.module.css'
 const QueryCarousel = (props) => {
     const { queries } = props;
 
-    console.log('queries', queries)
+    // console.log('queries', queries)
 
     // const breakPoints = [
     //     { width: 500, itemsToShow:1},

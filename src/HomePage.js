@@ -15,12 +15,6 @@ const homePage = () => {
             <div className={classes.container}>
                 <Notifications />
             </div>
-            <div className={classes.ProfileCarousel}>
-                <div className={classes.header}>
-                    <h6>Notable Alumni</h6>
-                </div>
-                <ProfileCarousel />
-            </div>
             <div className={classes.Flex}>
                 <div className={classes.QueryCarousel}>
                     <div>
@@ -33,6 +27,12 @@ const homePage = () => {
                         <h6 className={classes.title}>The Images</h6>
                     </div>
                     <Images />
+                </div>
+                <div className={classes.ProfileCarousel}>
+                    <div className={classes.header}>
+                        <h6 >Notable Alumni</h6>
+                    </div>
+                    <ProfileCarousel />
                 </div>
             </div>
         </div>

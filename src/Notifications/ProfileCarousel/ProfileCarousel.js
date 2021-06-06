@@ -3,7 +3,7 @@ import { firestoreConnect } from 'react-redux-firebase'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
 // import { Link } from 'react-router-dom'
-import ProfileNotify from '../../Profiles/Profile/Profile'
+import ProfileNotify from './Profile/Profile'
 import Carousel from 'react-elastic-carousel'
 
 import classes from './ProfileCarousel.module.css'

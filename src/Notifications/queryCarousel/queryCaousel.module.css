@@ -6,3 +6,7 @@
 .rec.rec-arrow {
   border-radius: 0;
 }
+
+.line {
+  border: 10px solid gray;
+}
