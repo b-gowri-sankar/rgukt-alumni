@@ -17,11 +17,12 @@
 }
 
 .Banner__description {
-  width: 45rem;
+  /* width: 45rem; */
   line-height: 1.3;
   font-size: 0.8rem;
   max-width: 400px;
   height: 80px;
+  width: 100% !important;
 }
 
 .Banner__button {
