@@ -24,3 +24,24 @@ code {
 .rec.rec-arrow:hover {
   border-radius: 50%;
 }
+
+button.rec-dot {
+  /* background-color: gray; */
+  border-radius: 0;
+  /* border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black; */
+
+  height: 2px;
+  width: 20px;
+  background-color: white;
+  margin: 3px;
+  /* box-shadow: 0 0 1px 3px rgba(235, 16, 16, 0.5); */
+}
+
+/* button.rec-dot:hover,
+button.rec-dot:active,
+button.rec-dot:focus {
+  background-color: red;
+  border-color: red;
+} */

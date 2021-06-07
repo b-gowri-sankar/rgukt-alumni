@@ -9,7 +9,8 @@
   align-content: flex-start;
   background-color: white;
   padding: 40px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #ccc;
+
   /* margin-top: 10px; */
 }
 

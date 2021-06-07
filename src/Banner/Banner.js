@@ -1,18 +1,23 @@
 import React from 'react';
 import classes from './Banner.module.css'
 import {connect }from 'react-redux'
+import { Link } from 'react-router-dom'
 // import {Redirect } from 'react-router-dom'
 
 const Banner = (props) => {
     const auth = props.auth;
     let button = (
         <div className={classes.Banner__buttons}>
+            <Link to="/signup">
             <button className={classes.Banner__button}>
-                Sign UP
-                    </button>
+                    SIGN UP
+            </button>
+            </Link>
+            <Link to="/signin">
             <button className={classes.Banner__button}>
-                Log In
-                    </button>
+                    LOG IN
+            </button>
+            </Link>
         </div>
     );
     button = !auth.uid ? button : null;
