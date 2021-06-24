@@ -5,12 +5,20 @@ import { compose } from 'redux'
 import { Link } from 'react-router-dom'
 import Post from './CenterPostEvents/Post'
 import classes from './PostNotify.module.css'
+// import LocalPostOfficeOutlinedIcon from '@material-ui/icons/LocalPostOfficeOutlined';
 
 const PostNotify = (props) => {
     const posts = props.post;
     return (
         <div className={classes.PostNotify}>
-            <h4 className={classes.internship__title}>Posts</h4>
+            {/* <div>
+                <LocalPostOfficeOutlinedIcon />
+            Country/region
+            </div> */}
+            <div className={classes.Header}>
+                {/* <LocalPostOfficeOutlinedIcon className={ classes.icon }/> */}
+                <h4 className={classes.internship__title}>Posts</h4>
+            </div>
             { posts && posts.map((post) => (
                 <Link to={'/post/'+post.id}>
                     <Post post={post} id={post.id} key={post.id}/>

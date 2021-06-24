@@ -23,11 +23,11 @@
   margin-right: 20px;
 }
 
-.Notifications h4 {
-  background-color: rgb(202, 71, 64);
+/* .Notifications h4 {
+  background-color: #004466;
   color: white;
   text-align: center;
-}
+} */
 @media only screen and (max-width: 750px) {
   .Notifications {
     display: block;

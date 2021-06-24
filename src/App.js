@@ -31,6 +31,7 @@ import Footer from './UI/footer/footer'
 // import ImagesNotify from './Notifications/Images/images'
 import Sidebar from './Components/SideBar/SideBar'
 // import spinner from './UI/spinner/spinner'
+import Header from './Components/Header/Header'
 
 const App = (  ) => {
 
@@ -40,9 +41,11 @@ const App = (  ) => {
   return (
     <BrowserRouter>
       <div className="App">
+        {/* <Header /> */}
+        <Route path='/' exact component={Header} />
         <NavBar />
         <Sidebar />
-        <Footer />
+        
         <Switch>
           <Route path="/internships" exact component={Centers}></Route>
           <Route path='/internship/:id' exact component={CenterDetails}></Route>
@@ -65,9 +68,9 @@ const App = (  ) => {
           {/* <Route path='/imagesnotify' exact component={ImagesNotify} /> */}
           {/* <Route path='/spinner' exact component={ spinner } /> */}
           {/* <Route path="/needs" exact component={Needs} /> */}
-
           <Route path='/' component={HomePage} />
-        </Switch>  
+        </Switch>
+        <Footer />
       </div>
     </BrowserRouter>
   );

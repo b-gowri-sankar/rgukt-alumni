@@ -21,7 +21,7 @@ const Nav = styled.div`
     left: 0;
     right: 0;
     height: 70px;
-    background-color: #090b13;
+    background-color: #004466;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,7 +45,7 @@ const NavIcon = styled(Link)`
 `;
 
 const SidebarNav = styled.nav`
-    background: #090b13;
+    background: #004466;
     width: 280px;
     height: 100%;
     display: flex;
@@ -64,7 +64,7 @@ const SidebarNav = styled.nav`
 `;
 
 const SidebarWrap = styled.nav`
-    background-color: #090b13;
+    background-color: #004466;
     height:100%;
     overflow: auto;
     &:hover{

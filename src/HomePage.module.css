@@ -136,3 +136,67 @@
     margin-left: o;
   } */
 }
+.box,
+.Images {
+  width: 510px;
+  height: 600px;
+}
+.facebook {
+  border: none;
+  overflow: hidden;
+  width: 510px;
+  height: 600px;
+  float: left;
+}
+
+.flex {
+  display: flex;
+  max-width: 1080px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+.flex > div {
+  width: 100%;
+}
+
+.prifile__header {
+  display: flex;
+  text-align: center;
+  background-color: #112a54;
+  color: white;
+  /* font-size: 20px; */
+  padding: 0 !important;
+  width: 100%;
+  vertical-align: middle;
+  padding-left: 20px;
+
+  /* background-color: red; */
+}
+
+.profile__text {
+  font-weight: 500;
+  font-size: 20px;
+  padding-left: 10px;
+  border-left: 1px solid white;
+  /* padding: 10px;
+  padding-bottom: 20px; */
+}
+
+.profile__text:hover {
+  border-bottom: 2px solid white;
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+.profile__icon {
+  padding-left: 10px;
+  padding-right: 10px;
+  transform: scale(1.8);
+}
+
+.title__profile {
+  margin-left: 10px;
+  margin-right: 20px;
+}
