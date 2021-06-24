@@ -27,6 +27,7 @@ import ProfileForm from './Profiles/Profile/Profileform';
 import Profiles from './Profiles/Profiles'
 import ProfileDetails from './Profiles/Profile/ProfileDetails'
 import Footer from './UI/footer/footer'
+import QuickLinks from './Components/QuickLinks/quickLinks'
 // import Needs from './NeedsCenter/Needs/Needs'
 // import ImagesNotify from './Notifications/Images/images'
 import Sidebar from './Components/SideBar/SideBar'
@@ -70,6 +71,7 @@ const App = (  ) => {
           {/* <Route path="/needs" exact component={Needs} /> */}
           <Route path='/' component={HomePage} />
         </Switch>
+        <QuickLinks />
         <Footer />
       </div>
     </BrowserRouter>
