@@ -1,13 +1,13 @@
 import React from 'react'
 import classes from './quickLinks.module.css'
 import { Link } from 'react-router-dom'
-import { firestoreConnect } from 'react-redux-firebase'
-import { connect } from 'react-redux'
-import { compose } from 'redux'
+// import { firestoreConnect } from 'react-redux-firebase'
+// import { connect } from 'react-redux'
+// import { compose } from 'redux'
 
 const quickLinks = (props) => {
 
-    const events_title = props.events;
+    // const events_title = props.events;
 
     return (
         <div className={classes.QuickLinks}>
@@ -19,7 +19,7 @@ const quickLinks = (props) => {
                     About Us
                 </Link>
             </div>
-            <div>
+            {/* <div>
                 <Link to='/events'>
                     <p>Events</p>
                 </Link>
@@ -28,7 +28,7 @@ const quickLinks = (props) => {
                         <p className={classes.event__title_quicklinks}>{event.title}</p>
                     </Link>
                 ))}
-            </div>
+            </div> */}
             <div className={classes.right}>
                 <Link to={{pathname: 'https://www.rguktrkv.ac.in/Institute.php?view=ContactUs'}} target="_blank">
                     <p>Contact Us</p>
@@ -39,19 +39,20 @@ const quickLinks = (props) => {
     )
 }
 
-const mapStateToProps = (state) => {
-    // console.log(state)
-    return {
-        // center: state.center.projects for demo purposes
-        events: state.firestore.ordered.events,
-        auth:state.firebase.auth
-    }
-}
+// const mapStateToProps = (state) => {
+//     // console.log(state)
+//     return {
+//         // center: state.center.projects for demo purposes
+//         events: state.firestore.ordered.events,
+//         auth:state.firebase.auth
+//     }
+// }
 
-export default compose(
-    connect(mapStateToProps),
-    firestoreConnect([
-        {collection:'events', orderBy: ['createdAt', 'desc']}
-    ])
-)(quickLinks)
+// export default compose(
+//     connect(mapStateToProps),
+//     firestoreConnect([
+//         {collection:'events', orderBy: ['createdAt', 'desc']}
+//     ])
+// )(quickLinks)
 
+export default quickLinks

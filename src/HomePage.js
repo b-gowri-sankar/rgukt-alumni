@@ -12,14 +12,19 @@ import CommentOutlinedIcon from '@material-ui/icons/CommentOutlined';
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 // import { withWidth } from '@material-ui/core';
 // import Input from './UI/input/input'
+import { firestoreConnect } from 'react-redux-firebase'
+import { connect } from 'react-redux'
+import { compose } from 'redux'
 
-const homePage = () => {
+const homePage = (props) => {
+
+    const events = props.events;
     // console.log("we are in the homepage")
     return (
         <div>
             <Banner />
             <div className={classes.container}>
-                <Notifications />
+                <Notifications events={ events }/>
             </div>
             <div className={classes.Flex}>
                 <div className={classes.box}>
@@ -66,5 +71,17 @@ const homePage = () => {
         </div>
     )
 }
+const mapStateToProps = (state) => {
+    // console.log(state)
+    return {
+        // center: state.center.projects for demo purposes
+        events: state.firestore.ordered.events,
+    }
+}
 
-export default homePage;
+export default compose(
+    connect(mapStateToProps),
+    firestoreConnect([
+        {collection:'events', limit:3, orderBy: ['createdAt', 'desc']}
+    ])
+)(homePage)

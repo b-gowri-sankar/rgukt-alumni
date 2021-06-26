@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-import classes from './SignIn.module.css'
+import classes from './SignUp.module.css'
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { signUp } from '../store/actions/authActions'
+import Button from '../UI/GoogleButton/button'
+import { Link } from 'react-router-dom'
 
 
 class SignUp extends Component {
@@ -29,12 +31,16 @@ class SignUp extends Component {
             return <Redirect to='/'/>
         return (
             <div className={classes.Container}>
-                <div className={classes.WebsiteName}>
-                    <h5>RGUKTRAA</h5>
+                <div className={classes.image}>
+                    <img src='./images/signup.svg' alt='the profile of the student' />
                 </div>
+                <div className={classes.WebsiteName}>
+                    <h5 className={classes.WebsiteTitle}><Link to='/'>RGUKTRAA</Link></h5>
+                <Button/>
                 <form onSubmit={this.handleSubmit} className={classes.form}>
-                    <h5 className={classes.Label}>
-                        Sign Up
+                        <h5 className={classes.Label}>
+                            Or <br />
+                        Create Account Amigo,
                     </h5>
                     <div className={classes.inputfield}>
                         <input className={classes.inputField} type='email' id='email' onChange={this.handleChange}  placeholder="email"/>
@@ -51,9 +57,11 @@ class SignUp extends Component {
                     </div>
                     <div className={classes.authError}>
                         {authError ? <p> {authError}</p>:null}
-                    </div>
+                        </div>
+                    <p className={classes.accountText}>Already Have An Account ? <span className={classes.clickHere}><Link to='/signin'>Click Here</Link></span></p>
                     <button className={classes.button}>Sign Up</button>
-                </form>
+                    </form>
+                    </div>
             </div>
         )
     }

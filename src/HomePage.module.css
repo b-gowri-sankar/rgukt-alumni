@@ -151,7 +151,7 @@
 
 .flex {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   max-width: 1080px;
   margin-right: auto;
   margin-left: auto;

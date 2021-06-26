@@ -57,11 +57,11 @@ class SignIn extends Component {
                         Welcome, Login Please !!!
                     </h5>
                     <div className={classes.inputfield}>
-                        <input className={classes.inputField} type='email' id='email' onChange={this.handleChange}  placeholder="email"></input>
+                        <input className={classes.inputField} type='email' id='email' onChange={this.handleChange}  placeholder="email" required></input>
                         
                     </div>
                     <div className={classes.inputfield}>
-                        <input className={classes.inputField} style={{boxSizing:'border-box'}}type='password' id='password' onChange={ this.handleChange} placeholder="password"/>
+                        <input className={classes.inputField} style={{boxSizing:'border-box'}}type='password' id='password' required onChange={ this.handleChange} placeholder="password"/>
                     </div>
                     <div>
                         {authError ? <p>{authError}</p>: null}

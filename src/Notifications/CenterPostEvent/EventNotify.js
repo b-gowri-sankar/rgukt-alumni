@@ -1,14 +1,14 @@
 import React from 'react'
-import { firestoreConnect } from 'react-redux-firebase'
-import { connect } from 'react-redux'
-import { compose } from 'redux'
+// import { firestoreConnect } from 'react-redux-firebase'
+// import { connect } from 'react-redux'
+// import { compose } from 'redux'
 import { Link } from 'react-router-dom'
 import Event from './CenterPostEvents/Event'
 import classes from './PostNotify.module.css'
 
 
 const EventNotify = (props) => {
-    const events = props.event;
+    const events = props.events;
     return (
         <div className={classes.EventNotify}>
             <h4 className={classes.internship__title}>Events</h4>
@@ -25,19 +25,21 @@ const EventNotify = (props) => {
         </div>
     )
 }
-const mapStateToProps = (state) => {
-    // console.log(state)
-    return {
-        // center: state.center.projects for demo purposes
-        event: state.firestore.ordered.events,
-        auth:state.firebase.auth
-    }
-}
 
-export default compose(
-    connect(mapStateToProps),
-    firestoreConnect([
-        {collection:'events', limit:3, orderBy: ['createdAt', 'desc']}
-    ])
-)(EventNotify)
+export default EventNotify;
+// const mapStateToProps = (state) => {
+//     // console.log(state)
+//     return {
+//         // center: state.center.projects for demo purposes
+//         auth:state.firebase.auth
+//     }
+// }
+
+// export default compose(
+//     connect(mapStateToProps),
+//     firestoreConnect([
+//         {collection:'events', limit:3, orderBy: ['createdAt', 'desc']}
+//     ])
+// )(EventNotify)
+
 

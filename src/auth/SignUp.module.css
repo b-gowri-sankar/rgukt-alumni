@@ -1,0 +1,84 @@
+.Container {
+  margin-top: 20px;
+  background-color: white;
+  height: max-content;
+  /* height: fit-content; */
+  /* position: absolute; */
+  top: -50px;
+  width: 70%;
+  right: calc(50% - 50px);
+  transition: 0.3s ease-in-out;
+  z-index: 0;
+  box-shadow: 0 0 15px 9px #00000096;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 50px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+}
+.WebsiteName > a {
+  color: whitesmoke;
+}
+
+.WebsiteTitle {
+  text-align: center;
+  /* font-weight: 700; */
+  letter-spacing: 1.1rem;
+  margin-top: 10px;
+  width: 100%;
+  background-color: #004466;
+  color: white;
+  padding: 5px;
+  align-items: center;
+  border-radius: 10px;
+  text-shadow: black;
+  padding: 20px;
+}
+
+.WebsiteTitle > a {
+  color: whitesmoke;
+}
+
+.Container > div {
+  width: 100%;
+}
+
+.image > img {
+  width: 100%;
+  height: 100%;
+}
+
+.accountText {
+  color: grey;
+}
+
+.clickHere > a {
+  text-decoration: underline;
+  cursor: pointer;
+  color: grey;
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  color: whitesmoke;
+  border: 1px solid gray;
+  border-radius: 30px;
+  background-color: #004466;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  font-size: 17px;
+  margin-top: 5px;
+}
+.button:hover {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  cursor: pointer;
+}
+
+.Label {
+  color: grey;
+}
