@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './Event.module.css';
 
 const Event = (props) => {
-    console.log(props)
+    // console.log(props)
     return (
         <div className={classes.Event}>
             <div className={classes.DateContainer}>

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 const Query = ({ docs }) => {
     
-    console.log(docs)
+    // console.log(docs)
 
     return (
         <div className={classes.Card}>

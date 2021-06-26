@@ -4,7 +4,7 @@ import './App.css';
 // import NeedsCenter from './NeedsCenter/NeedsCenter'
 // import { Redirect } from 'react-router-dom'
 
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 import Centers from './NeedsCenter/Centers/Centers'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NavBar from './layout/Navbar';
@@ -34,11 +34,22 @@ import Sidebar from './Components/SideBar/SideBar'
 // import spinner from './UI/spinner/spinner'
 import Header from './Components/Header/Header'
 
-const App = (  ) => {
+const App = ( props) => {
 
-  // const auth = props.auth;
+  const auth = props.auth;
 
-  // if (!auth.uid) return <Redirect to='/signin'/>
+  if (!auth.uid)
+    return (
+      <BrowserRouter>
+        <Route path='/signin' exact component={SignIn} />
+        <Route path='/'exact component={NavBar} />
+        <Route path='/' exact component={Sidebar} />
+        <Route path='/' exact component={HomePage} />
+        <Route path='/' exact component={QuickLinks} />
+        <Route path='/' exact component={Footer} />
+        <Route path='/signup' exact component={SignUp} />
+      </BrowserRouter>
+    )
   return (
     <BrowserRouter>
       <div className="App">
@@ -78,12 +89,12 @@ const App = (  ) => {
   );
 }
 
-// const mapStateToProps = (state) => {
-//   // console.log('state',state.firebase.auth)
-//   return {
-//     auth:state.firebase.auth
-//   }
-// }
+const mapStateToProps = (state) => {
+  // console.log('state',state.firebase.auth)
+  return {
+    auth:state.firebase.auth
+  }
+}
 
 
-export default App;
+export default connect(mapStateToProps)(App);

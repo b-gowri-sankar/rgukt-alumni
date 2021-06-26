@@ -4,6 +4,7 @@ export const createQuery = (query) => {
         //make a call to Database
         const firestore = getFirebase().firestore();
         const profile = getState().firebase.profile;
+        console.log("this si profile data",profile)
         // const authorId = getState().firebase.auth.uid;
         firestore.collection('queries').add({
             ...query,

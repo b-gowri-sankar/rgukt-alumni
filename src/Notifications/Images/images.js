@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom'
 const images = (props) => {
 
     const { images } = props;
-    console.log("this is images",images)
+    // console.log("this is images",images)
     if (images) {
         
         return (
@@ -55,7 +55,7 @@ const images = (props) => {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state)
+    // console.log(state)
     return {
         // center: state.center.projects for demo purposes
         images: state.firestore.ordered.images

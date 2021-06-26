@@ -33,7 +33,7 @@ const PostNotify = (props) => {
     )
 }
 const mapStateToProps = (state) => {
-    console.log(state)
+    // console.log(state)
     return {
         // center: state.center.projects for demo purposes
         post: state.firestore.ordered.posts,

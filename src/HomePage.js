@@ -10,10 +10,11 @@ import QueryCarousel from './Notifications/queryCarousel/queryCarousel'
 import Images from './Notifications/Images/images';
 import CommentOutlinedIcon from '@material-ui/icons/CommentOutlined';
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
+// import { withWidth } from '@material-ui/core';
 // import Input from './UI/input/input'
 
 const homePage = () => {
-    console.log("we are in the homepage")
+    // console.log("we are in the homepage")
     return (
         <div>
             <Banner />
@@ -29,16 +30,36 @@ const homePage = () => {
                 </div>
             </div>
             <div className={classes.flex}>
-                <div className={classes.title__profile}>
-                    <div className={classes.prifile__header}>                        
-                        <p><span className={classes.profile__icon}><AccountCircleOutlinedIcon /></span><span className={classes.profile__text}>Profile</span></p>
-                    </div>
+            <div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            flexWrap: 'wrap',
+                            background: '#004466',
+                            color: 'white',
+                            padding: '10px',
+                            
+                        }}>
+                            <AccountCircleOutlinedIcon />
+                            <span className={classes.text}>Profile</span>
+                        </div>  
                     <ProfileCarousel />
                 </div>
                 <div>
-                    <div className={classes.prifile__header}>                        
-                        <p><span className={classes.profile__icon}><CommentOutlinedIcon /></span><span className={classes.profile__text}>Queries</span></p>
-                    </div>
+                    <div
+                        style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            flexWrap: 'wrap',
+                            background: '#004466',
+                            color: 'white',
+                            padding: '10px'
+                            
+                        }}>
+                            <CommentOutlinedIcon />
+                            <span className={classes.text}>Queries</span>
+                        </div>  
                     <QueryCarousel />
                 </div>
             </div>

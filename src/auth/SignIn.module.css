@@ -1,11 +1,17 @@
+/* .SuperContainer {
+  width: ;
+  height: 100vh;
+  background-color: #004466;
+} */
+
 .Container {
   margin-top: 20px;
-  background-color: rgba(255, 255, 255, 1);
-  /* height: 520px; */
-  height: fit-content;
+  background-color: white;
+  height: max-content;
+  /* height: fit-content; */
   /* position: absolute; */
   top: -50px;
-  width: 50%;
+  width: 70%;
   right: calc(50% - 50px);
   transition: 0.3s ease-in-out;
   z-index: 0;
@@ -13,7 +19,26 @@
   margin: 0 auto;
   margin-top: 20px;
   padding: 50px;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.left {
+  width: 100%;
+  height: 100%;
+}
+.Buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.right {
+  width: 100%;
 }
 
 .inputfield {
@@ -30,6 +55,9 @@
   text-shadow: #ca4740;
   width: 100% !important;
 } */
+.WebsiteName > a {
+  color: whitesmoke;
+}
 
 .WebsiteName {
   text-align: center;
@@ -37,7 +65,7 @@
   letter-spacing: 1.1rem;
   margin-top: 10px;
   width: 100%;
-  background-color: #090b13;
+  background-color: #004466;
   color: white;
   padding: 5px;
   align-items: center;
@@ -46,35 +74,38 @@
 }
 ::placeholder {
   color: black;
-  text-transform: uppercase;
+  text-transform: capitalize !important;
   padding: 10px;
-}
-input:not([type="submit"]):not([type="file"]) {
-  /* omg so much cleaner */
   text-align: center;
+  color: grey !important;
 }
+/* input:not([type="submit"]):not([type="file"]) {
+  text-align: center;
+} */
 
 .Label {
   text-align: center;
 }
 
 .button {
-  margin: 0 auto;
-  display: block;
-  color: white;
-  background-color: black;
-  border: white;
+  width: 100%;
   padding: 10px;
-  border-radius: 10px;
-  margin-top: 10px;
-  cursor: pointer;
-  padding-left: 10px;
+  color: whitesmoke;
+  border: 1px solid gray;
+  border-radius: 30px;
+  background-color: #004466;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  font-size: 17px;
+  margin-top: 5px;
 }
 
 .button:hover {
   background-color: white;
   border: 1px solid black;
   color: black;
+  cursor: pointer;
 }
 
 /* .Container{
@@ -89,4 +120,18 @@ input:not([type="submit"]):not([type="file"]) {
   .Container {
     width: 80%;
   }
+}
+
+.accountText {
+  color: grey;
+  text-align: left;
+  align-content: flex-end;
+}
+
+.accountText > a {
+  color: grey;
+}
+
+.accountText > a:hover {
+  text-decoration: underline;
 }

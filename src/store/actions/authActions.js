@@ -1,3 +1,5 @@
+// import { googleProvider } from "../../config/authMethods";
+
 export const signIn = (credentials) => {
     console.log('sign in')
     return (dispatch, getState, { getFirebase }) => {
@@ -11,6 +13,29 @@ export const signIn = (credentials) => {
         }).catch((err) => {
             dispatch({ type: "LOGIN_ERROR", err })
         });
+    }
+}
+
+export const googleSignIn = (provider) => {
+    console.log('google sign in');
+    return (dispatch, getState, { getFirebase }) => {
+        const firestore = getFirebase().firestore();
+        const firebase = getFirebase();
+        console.log(provider.providerId)
+        firebase.auth().signInWithPopup(provider).then((res) => {
+            let splitDisplayName = null;
+            if (provider.providerId === 'github.com'){
+                splitDisplayName = [res.additionalUserInfo.username, 'gitHub']
+            }
+            else{
+                splitDisplayName = res.user.displayName.split(' ')
+            }
+            return firestore.collection('users').doc(res.user.uid).set({
+                firstName: splitDisplayName[0],
+                lastName: splitDisplayName[1],
+                initials: splitDisplayName[0][0]+splitDisplayName[1][0]
+            })
+        })
     }
 }
 

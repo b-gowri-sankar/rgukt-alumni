@@ -3,7 +3,7 @@ import classes from './Post.module.css';
 import moment from 'moment'
 
 const Post = (props) => {
-    console.log("this is Post",props.post.createdAt)
+    // console.log("this is Post",props.post.createdAt)
     // console.log(props)
     return (
         <div className={classes.Post}>
