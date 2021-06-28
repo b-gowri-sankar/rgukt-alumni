@@ -17,3 +17,9 @@
   color: black;
   cursor: pointer;
 }
+
+.button:disabled {
+  background-color: #004466;
+  color: gray;
+  border: 1px solid black;
+}

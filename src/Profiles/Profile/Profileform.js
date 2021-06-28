@@ -6,6 +6,8 @@ import Progress from '../../Images/Progress'
 import { fire } from '../../config/fbConfig'
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux';
+import Button from '../../UI/CustomButton/Button'
+import WebsiteTitle from '../../UI/WebsiteName/WebsiteTitle'
 
 // const db = app.firestore();
 
@@ -62,9 +64,14 @@ const Profileform = (props) => {
         return <Redirect to='/signin'/>
   return (
     <div className={classes.Container}>
+      <div>
+        <img src='./images/Profiles.svg' alt='profile poc' style={{width:'100%', height:'100%'}} />
+      </div>
+      <div className={classes.right}>
+        <WebsiteTitle>RGURAA</WebsiteTitle>
       <form onSubmit={onSubmit}>
         <div className={classes.inputfield}>
-          <input className={classes.inputField} type="file" onChange={onFileChange} required/>
+          <input className={classes.fileField} type="file" onChange={onFileChange} required/>
         </div>
         {error &&<div className={classes.error}>{error}</div>}
         {file && <div> {file.name}</div>}
@@ -83,8 +90,9 @@ const Profileform = (props) => {
         
         
         <textarea type='text' name='biography' placeholder='biography' />
-        <button className={classes.button} disabled={value}>Submit</button>
-      </form>
+        <Button disabled={value}>Submit</Button>
+        </form>
+        </div>
     </div>
   );
 }

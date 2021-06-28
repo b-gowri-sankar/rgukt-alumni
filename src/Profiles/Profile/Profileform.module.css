@@ -1,22 +1,20 @@
 .Container {
-  margin-top: 20px;
-  background-color: rgba(255, 255, 255, 1);
-  height: fit-content;
-  /* height: 700px; */
-  /* position: absolute; */
-  top: -50px;
-  width: 50%;
-  right: calc(50% - 50px);
-  transition: 0.3s ease-in-out;
-  z-index: 0;
-  box-shadow: 0 0 15px 9px #00000096;
-  margin: 0 auto;
-  margin-top: 20px;
-  padding: 50px;
+  display: flex;
+  padding: 40px;
 }
 
 .inputfield {
   margin-top: 20px;
+}
+
+/* .fileField {
+  background-color: #004466;
+
+} */
+
+.right {
+  width: 100%;
+  padding: 30px;
 }
 
 /* .inputField {
