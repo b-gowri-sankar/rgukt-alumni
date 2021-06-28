@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import classes from './QueryForm.module.css';
 import { createQuery } from '../../store/actions/queryActions'
 import { connect } from 'react-redux'
-import {Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
+import Button from '../../UI/CustomButton/Button'
+import WebsiteTitle from '../../UI/WebsiteName/WebsiteTitle'
 
 class QueryForm extends Component {
     state = {
@@ -25,9 +27,12 @@ class QueryForm extends Component {
             return <Redirect to='/signin'/>
         return (
             <div className={classes.Container}>
-                <div className={classes.WebsiteName}>
-                    <h5>RGUKTRAA</h5>
+                <div>
+                    <img src='./images/query.svg' alt='query' style={{ width:'100%', height:'100%' }}/>
                 </div>
+                <div className={classes.right}>
+                    <WebsiteTitle>RGURAA</WebsiteTitle>
+                
                 <form onSubmit={this.handleSubmit} className={classes.form}>
                     <h5 className={classes.Label}>
                         Ask Query
@@ -35,8 +40,9 @@ class QueryForm extends Component {
                     <div className={classes.inputfield}>
                         <textarea id='description' placeholder='description' className={classes.text_area} onChange={this.handleChange}></textarea>
                     </div>                   
-                    <button className={classes.button}>Ask Query</button>
-                </form>
+                    <Button>Ask Query</Button>
+                    </form>
+                </div>
             </div>
         )
     }
