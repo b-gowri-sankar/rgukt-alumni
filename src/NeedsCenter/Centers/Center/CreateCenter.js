@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import classes from './CreateCenter.module.css';
 import { createCenter } from '../../../store/actions/centerActions'
 import { connect } from 'react-redux'
-import {Redirect } from 'react-router-dom'
-
+import { Redirect } from 'react-router-dom'
+import Button from '../../../UI/CustomButton/Button'
+import WebsiteTitle from '../../../UI/WebsiteName/WebsiteTitle'
 class CreateProject extends Component {
     state = {
         title: '',
@@ -30,12 +31,15 @@ class CreateProject extends Component {
             return <Redirect to='/signin'/>
         return (
             <div className={classes.Container}>
-                <div className={classes.WebsiteName}>
-                    <h5>RGUKTRAA</h5>
+                <div className={classes.image}>
+                    <img src='./images/internship.svg' alt='internship pic' />
                 </div>
+                <div className={classes.right}>
+                    <WebsiteTitle >RGURAA</WebsiteTitle>
+                
                 <form onSubmit={this.handleSubmit} className={classes.form}>
                     <h5 className={classes.Label}>
-                        Create Internship
+                        Upload Internship for Your Juniors or Students
                     </h5>
                     <div className={classes.inputfield}>
                         <input className={classes.inputField} type='text' id='title' onChange={this.handleChange}  placeholder="title"/>
@@ -57,8 +61,9 @@ class CreateProject extends Component {
                         <input className={classes.inputField} style={{boxSizing:'border-box'}}type='text' id='link' onChange={ this.handleChange} placeholder="Link"/>
                     </div>
                     
-                    <button className={classes.button}>Create Intership</button>
-                </form>
+                    <Button>Create Intership</Button>
+                    </form>
+                </div>
             </div>
         )
     }

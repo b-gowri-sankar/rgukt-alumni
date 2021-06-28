@@ -18,7 +18,7 @@
 .image > img {
   width: 80%;
   height: 80%;
-  align: right;
+  /* align: right; */
 }
 
 .right {
