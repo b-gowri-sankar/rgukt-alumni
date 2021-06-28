@@ -1,9 +1,11 @@
 import React, { Component } from 'react'
 // import classes from './SignIn.module.css'
-import classes from '../../../auth/SignIn.module.css'
+import classes from '../../../NeedsCenter/Centers/Center/CreateCenter.module.css'
 import { connect } from 'react-redux'
 import { createEvent } from '../../../store/actions/eventActions'
 import { Redirect } from 'react-router-dom'
+import Button from '../../../UI/CustomButton/Button'
+import WebsiteTitle from '../../../UI/WebsiteName/WebsiteTitle'
 
 
 class CreateEvent extends Component {
@@ -31,11 +33,16 @@ class CreateEvent extends Component {
             return <Redirect to='/signin'/>
         return (
             <div className={classes.Container}>
-                <div className={classes.WebsiteName}>
-                    <h5>RGUKTRAA</h5>
+                <div>
+                    <img src='./images/events.svg' alt='event pic' style={{ width:'100%', height:'100%'} }/>
                 </div>
+                <div className={classes.WebsiteName}>
+                <WebsiteTitle>
+                        RGURAA
+                    </WebsiteTitle>
+                
                 <form onSubmit={this.handleSubmit} className={classes.form}>
-                    <h5 className={classes.Label}>
+                    <h5 style={{textAlign:'center', color:'gray', marginTop:'20px', marginBottom:'10px'}}>
                         Create Event
                     </h5>
                     <div className={classes.inputfield}>
@@ -52,8 +59,9 @@ class CreateEvent extends Component {
                         <textarea id='content' placeholder='content' className={classes.text_area} onChange={this.handleChange}></textarea>
                     </div>
                     
-                    <button className={classes.button}>Create Event</button>
-                </form>
+                    <Button>Create Event</Button>
+                    </form>
+                    </div>
             </div>
         )
     }
