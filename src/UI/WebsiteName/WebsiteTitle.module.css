@@ -1,0 +1,14 @@
+.WebsiteTitle {
+  text-align: center;
+  /* font-weight: 700; */
+  letter-spacing: 1.1rem;
+  margin-top: 10px;
+  width: 100%;
+  background-color: #004466;
+  color: white;
+  padding: 5px;
+  align-items: center;
+  border-radius: 10px;
+  text-shadow: black;
+  padding: 20px;
+}

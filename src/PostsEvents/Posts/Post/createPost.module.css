@@ -1,0 +1,41 @@
+.Container {
+  display: flex;
+  /* max-width: 980px; */
+  margin: 0 auto;
+  box-sizing: border-box;
+  height: max-content;
+  top: -50px;
+  /* width: 70%; */
+  /* box-shadow: 0 0 15px 9px #00000096;
+  margin-top: ; */
+  margin-top: 20px;
+}
+
+.Container > div {
+  width: 100%;
+}
+
+.image > img {
+  width: 80%;
+  height: 80%;
+  align: right;
+}
+
+.right {
+  margin-right: 40px;
+}
+
+.WebsiteName {
+  text-align: center;
+  /* font-weight: 700; */
+  letter-spacing: 1.1rem;
+  margin-top: 10px;
+  width: 100%;
+  background-color: #004466;
+  color: white;
+  padding: 5px;
+  align-items: center;
+  border-radius: 10px;
+  text-shadow: black;
+  padding: 20px;
+}
