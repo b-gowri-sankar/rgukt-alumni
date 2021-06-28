@@ -1,7 +1,9 @@
 .Header {
   height: fit-content;
   width: 100%;
-  margin: auto 1008px;
+  display: flex;
+  justify-content: space-between;
+  /* margin: auto 1008px; */
   /* text-align: center; */
 }
 .Header > h4 {
@@ -11,4 +13,25 @@
   height: fit-content;
   padding: 10px;
   text-align: center;
+  margin-left: 100px;
+  border-radius: 20px;
+  cursor: pointer;
+  /* margin-bottom: 100px; */
+}
+
+.socialMediaIcons {
+  /* margin-right: 100px; */
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
+  padding-right: 100px;
+  display: flex;
+}
+
+.Icons {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+  /* padding: 10px; */
 }
