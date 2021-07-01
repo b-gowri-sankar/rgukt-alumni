@@ -8,6 +8,7 @@
   /* border-radius: 10px; */
   box-shadow: 0 3px 6px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
   border-bottom: 1px solid gray;
+  border: 1px solid #e4e4e4;
 }
 
 .Description {

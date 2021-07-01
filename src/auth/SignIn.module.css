@@ -119,6 +119,7 @@
 @media only screen and (max-width: 750px) {
   .Container {
     width: 90%;
+    display: block;
   }
 }
 @media only screen and (max-width: 1080px) and (min-width: 750px) {

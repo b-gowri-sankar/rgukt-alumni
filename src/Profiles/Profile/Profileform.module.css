@@ -6,6 +6,12 @@
 .inputfield {
   margin-top: 20px;
 }
+@media only screen and (max-width: 750px) {
+  .Container {
+    display: block;
+  }
+  /* display: flex: ;; */
+}
 
 /* .fileField {
   background-color: #004466;

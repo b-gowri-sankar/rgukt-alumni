@@ -11,7 +11,8 @@ import { Link } from 'react-router-dom'
 
 const images = (props) => {
 
-    const { images } = props;
+    const images = props.images;
+    console.log('images', images)
     // console.log("this is images",images)
     if (images) {
         

@@ -34,7 +34,7 @@ const homePage = (props) => {
                     <Images/>
                 </div>
             </div>
-            <div className={classes.flex}>
+            <div className={classes.Flex}>
             <div>
                     <div
                         style={{
@@ -44,12 +44,15 @@ const homePage = (props) => {
                             background: '#004466',
                             color: 'white',
                             padding: '10px',
-                            
+                            width: '500px',
+                            marginLeft:'10px'
                         }}>
                             <AccountCircleOutlinedIcon />
                             <span className={classes.text}>Profile</span>
-                        </div>  
-                    <ProfileCarousel />
+                    </div>
+                    <div>
+                        <ProfileCarousel />
+                    </div>
                 </div>
                 <div>
                     <div
@@ -59,7 +62,9 @@ const homePage = (props) => {
                             flexWrap: 'wrap',
                             background: '#004466',
                             color: 'white',
-                            padding: '10px'
+                            padding: '10px',
+                            width: '500px',
+                            marginLeft:'10px'
                             
                         }}>
                             <CommentOutlinedIcon />

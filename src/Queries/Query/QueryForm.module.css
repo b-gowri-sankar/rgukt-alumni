@@ -14,6 +14,12 @@
   justify-content: center;
   margin-top: 60px;
 }
+@media only screen and (max-width: 750px) {
+  .Container {
+    display: block;
+  }
+  /* display: flex: ;; */
+}
 
 /* .inputField {
   background-color: white !important;

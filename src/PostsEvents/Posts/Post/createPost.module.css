@@ -10,6 +10,7 @@
   /* box-shadow: 0 0 15px 9px #00000096;
   margin-top: ; */
   margin-top: 20px;
+  flex-wrap: nowrap;
 }
 
 .Container > div {
@@ -39,4 +40,11 @@
   border-radius: 10px;
   text-shadow: black;
   padding: 20px;
+}
+
+@media only screen and (max-width: 750px) {
+  .Container {
+    display: block;
+  }
+  /* display: flex: ;; */
 }

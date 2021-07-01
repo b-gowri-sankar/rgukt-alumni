@@ -35,3 +35,17 @@
   cursor: pointer;
   /* padding: 10px; */
 }
+@media only screen and (max-width: 750px) {
+  .Header > h4 {
+    margin-left: 10px;
+  }
+
+  .socialMediaIcons {
+    padding-right: 10px;
+  }
+}
+@media only screen and (max-width: 1080px) and (min-width: 750px) {
+  .Container {
+    width: 80%;
+  }
+}
