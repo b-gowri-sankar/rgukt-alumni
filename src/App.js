@@ -41,6 +41,7 @@ const App = ( props) => {
   if (!auth.uid)
     return (
       <BrowserRouter>
+        <Header />
         <Route path='/signin' exact component={SignIn} />
         <Route path='/'exact component={NavBar} />
         <Route path='/' exact component={Sidebar} />
@@ -54,7 +55,7 @@ const App = ( props) => {
     <BrowserRouter>
       <div className="App">
         {/* <Header /> */}
-        <Route path='/' exact component={Header} />
+        <Header />
         <NavBar />
         <Sidebar />
         

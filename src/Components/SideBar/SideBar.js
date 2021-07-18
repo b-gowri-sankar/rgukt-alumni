@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom'
  
 import { SideBarData } from './SideBarData'
 import SideBarDropDown from './SideBarDropDown'
-
+import { signOut } from '../../store/actions/authActions';
 
 import styled from 'styled-components'
 
@@ -154,6 +154,7 @@ const SideBar = (props) => {
                     {SideBarData && SideBarData.map((item, index) => (
                         <SideBarDropDown item={item} key={ index }/>
                     ))}
+                    <Link to='#!' style={{padding:'1em 1em'}} onClick={props.signOut}>LOG OUT</Link>
                 </SidebarWrap>
                 
             </SidebarNav>
@@ -166,6 +167,11 @@ const mapStateToProps = (state) => {
     return {
       auth: state.firebase.auth
     }
-  }
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        signOut: ()=>dispatch(signOut())
+    }
+}
   
-  export default connect(mapStateToProps)(SideBar);
+  export default connect(mapStateToProps, mapDispatchToProps)(SideBar);

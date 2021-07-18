@@ -8,6 +8,85 @@ body {
   /* box-sizing: border-box; */
   font-family: "Montserrat", sans-serif;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.logo-contact {
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  height: 15vh;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo-name {
+  font-size: 22px;
+  color: #004466;
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.icons span {
+  margin: 5px;
+}
+
+.logo-contact span {
+  color: gray;
+}
+.fab,
+.fas {
+  color: whitesmoke;
+  cursor: pointer;
+}
+
+.fab:hover {
+  color: #de818a;
+}
+
+.icon {
+  height: 1vh;
+  width: 1vh;
+  background-color: #de818a;
+  padding: 10px;
+  border-radius: 100%;
+  transition: 0.5s;
+}
+
+.icon:hover {
+  background-color: #004466;
+}
+
+.header-nav {
+  height: 6vh;
+  background-color: #004466;
+  color: whitesmoke;
+  display: flex;
+  text-decoration: none;
+  flex-wrap: nowrap;
+  /* justify-content: space-around; */
+  list-style: none;
+  align-items: center;
+  width: 100%;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.header-nav li {
+  padding: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 750px) {
+  .icons {
+    display: none;
+  }
+}
+
 /* a {
   color: black;
 } */
