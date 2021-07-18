@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Profile = (props) => {
     return (
-        <Link to={'profile/'+props.doc.id}>
+        <Link to={'profile/'+props.doc.id} className={classes.link_card_by_me}>
             <div className={classes.card}>
                 <div className={ classes.profilesidebar}>
                     <img

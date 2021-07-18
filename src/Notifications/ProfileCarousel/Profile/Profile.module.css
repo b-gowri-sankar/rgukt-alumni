@@ -21,7 +21,7 @@
   display: flex;
   flex-wrap: wrap;
   height: fit-content;
-  width: 500px;
+  /* width: 500px; */
   border: 1px solid #e5e5e5;
   /* padding-left: 10px;
   padding-right: 10px; */
@@ -56,4 +56,14 @@
 
 .profilesidebar {
   margin: auto 0;
+}
+
+@media screen and (max-width: 750px) {
+  .link_card_by_me {
+    width: 100%;
+  }
+
+  .link_card_by_me img {
+    width: 100px;
+  }
 }
