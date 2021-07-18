@@ -35,10 +35,12 @@ const SingleSocialField = () => {
     }
 
     return (
-        <>  
+        <>
+            <div className={classes.divButton}>  
             <button className={ classes.Button} onClick={()=>dispalyFeed('Facebook')}>Facebook</button>
             <button className={ classes.Button} onClick={()=>dispalyFeed('Twitter')}>Twitter</button>
-            <button className={classes.Button} onClick={() => dispalyFeed('Instagram')}>Instagram</button>
+                <button className={classes.Button} onClick={() => dispalyFeed('Instagram')}>Instagram</button>
+                </div>
             <>
                 {disFac && <FacebookFeed />}
                 {disIns && <InstagramFeed />}

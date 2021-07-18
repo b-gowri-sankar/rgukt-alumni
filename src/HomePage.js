@@ -26,49 +26,29 @@ const homePage = (props) => {
             <div className={classes.container}>
                 <Notifications events={ events }/>
             </div>
-            <div className={classes.Flex}>
-                <div className={classes.box}>
+            <div className={classes.AnotherSocialMediaBox}>
+                <div className={classes.SingleSocialFeedBox}>
                     <SingleSocialFeed />
                 </div>
-                <div className={classes.Images}>
+                <div className={classes.AnotherImages}>
                     <Images/>
                 </div>
             </div>
-            <div className={classes.Flex}>
-            <div>
-                    <div
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            flexWrap: 'wrap',
-                            background: '#004466',
-                            color: 'white',
-                            padding: '10px',
-                            width: '500px',
-                            marginLeft:'10px'
-                        }}>
-                            <AccountCircleOutlinedIcon />
-                            <span className={classes.text}>Profile</span>
+            <div className={classes.ProfileQuery}>
+                <div className={classes.carouselProfile}>
+                    <div className={classes.Profile_card}>
+                        <AccountCircleOutlinedIcon style={{fontSize:'30px'}}/>
+                            <span className={classes.text}>Profile :-</span>
                     </div>
                     <div>
                         <ProfileCarousel />
                     </div>
                 </div>
-                <div>
+                <div className={classes.carouselProfile}>
                     <div
-                        style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            flexWrap: 'wrap',
-                            background: '#004466',
-                            color: 'white',
-                            padding: '10px',
-                            width: '500px',
-                            marginLeft:'10px'
-                            
-                        }}>
-                            <CommentOutlinedIcon />
-                            <span className={classes.text}>Queries</span>
+                        className={classes.Profile_card}>
+                            <CommentOutlinedIcon style={{fontSize:'30px'}}/>
+                            <span className={classes.text}>Queries :-</span>
                         </div>  
                     <QueryCarousel />
                 </div>

@@ -3,6 +3,7 @@
 .Container {
   border: 1px solid #e5e5e5;
   border-radius: 20px;
+  height: 100%;
 }
 
 .Post {

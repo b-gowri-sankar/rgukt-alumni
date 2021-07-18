@@ -1,9 +1,17 @@
 .Button {
-  width: 170px;
   margin-bottom: 10px;
   padding: 10px;
   border: none;
   color: white;
   background-color: #004466;
   cursor: pointer;
+}
+
+.divButton {
+  width: 100%;
+  display: flex;
+}
+
+.divButton button {
+  flex: 1;
 }
